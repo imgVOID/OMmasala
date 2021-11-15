@@ -18,11 +18,11 @@ const CarouselCaption = (props) => {
             {props.text}
         </h5>
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
-            <HeaderButton name="nature" text='Nature' path={props.path}/>
-            <HeaderButton name="mandir" text='Mandir' path={props.path}/>
+            <HeaderButton name="nature" text='Nature' color="warning" path={props.path}/>
+            <HeaderButton name="mandir" text='Mandir' color="warning" path={props.path}/>
             <br className="d-lg-none"/>
-            <HeaderButton name="tibetan" text='Tibetan' path={props.path}/>
-            <HeaderButton name="krishna" text='Krishna' path={props.path}/>
+            <HeaderButton name="tibetan" text='Tibetan' color="warning" path={props.path}/>
+            <HeaderButton name="krishna" text='Krishna' color="warning" path={props.path}/>
         </div>
     </MDBCarouselCaption>
 }

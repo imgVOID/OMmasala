@@ -3,6 +3,7 @@ import HeaderDescription from "./HeaderDescription";
 import HeaderButton from "./HeaderButton";
 
 const HeaderStatic = (props) => {
+    let header = props.path[1] !== 'catalog'
     let display = ""
     if (props.dNoneBig) {
         display = "d-lg-none d-md-none"
@@ -22,11 +23,11 @@ const HeaderStatic = (props) => {
                         <HeaderButton name="all" text="Все аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none`}/>
-                        <HeaderButton name="nature" text='Nature' path={props.path}/>
-                        <HeaderButton name="mandir" text='Mandir' path={props.path}/>
+                        <HeaderButton name="nature" text='Nature' path={props.path} header={header}/>
+                        <HeaderButton name="mandir" text='Mandir' path={props.path} header={header}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="tibetan" text='Tibetan' path={props.path}/>
-                        <HeaderButton name="krishna" text='Krishna' path={props.path}/>
+                        <HeaderButton name="tibetan" text='Tibetan' path={props.path} header={header}/>
+                        <HeaderButton name="krishna" text='Krishna' path={props.path} header={header}/>
                         <br className={`d-lg-none d-md-none`}/>
                         <HeaderButton name="holders" text="Подставочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
