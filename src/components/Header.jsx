@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
-import {
-    MDBBtn
-} from 'mdb-react-ui-kit';
+import {useLocation} from "react-router-dom";
 import Navigation from "./Navigation";
+import HeaderDescription from "./HeaderDescription";
+import HeaderButton from "./HeaderButton";
+
 
 export default function Header() {
     const location = useLocation();
@@ -11,59 +11,36 @@ export default function Header() {
     const {pathname} = location;
     //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
+    function LineBreakCatalog() {
+        return <br className={`${splitLocation[1] !== "catalog" ? "d-none" : ""} d-lg-none d-md-none`}/>
+    }
 
     return (
-        <header className="mb-4">
+        <header>
             <Navigation path={splitLocation}/>
-
-            <div className='p-4 text-center bg-image'
+            <div className='text-center bg-image shadow mt-2 mt-lg-5'
                  style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')", height: 400}}>
                 <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.6)'}}>
-                    <div className='d-flex justify-content-center align-items-center h-100 p-5'>
-                        <div className='text-white'>
-                            <h1 className='mb-3 mt-4 mt-lg-0'>
+                    <div className='d-flex justify-content-center align-items-center h-100'>
+                        <div className='text-white mt-5 pt-5 p-lg-0 m-lg-0'>
+                            <h1 className={`${splitLocation[1] === "catalog" ? "d-none" : ""} mb-0 d-lg-block d-md-block`}>
                                 OM MASALA
                             </h1>
-                            <h5 className='mb-3 font-italic text-warning'>
-                                индийские пыльцовые благовония ручной работы
-                            </h5>
-                            <div className={`${splitLocation[1] !== "catalog" ? "d-none" : ""} mb-4 mb-lg-0`}>
-                                <Link to="/catalog/all">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "all" ? "warning" : "light"}>
-                                        Все аромапалочки
-                                    </MDBBtn>
-                                </Link>
-                                <Link to="/catalog/nature">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "nature" ? "warning" : "light"}>
-                                        "Nature"
-                                    </MDBBtn>
-                                </Link>
-                                <Link to="/catalog/mandir">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "mandir" ? "warning" : "light"}>
-                                        "Mandir"
-                                    </MDBBtn>
-                                </Link>
-                                <Link to="/catalog/tibetan">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "tibetan" ? "warning" : "light"}>
-                                        "Tibetan"
-                                    </MDBBtn>
-                                </Link>
-                                <Link to="/catalog/krishna">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "krishna" ? "warning" : "light"}>
-                                        "Krishna"
-                                    </MDBBtn>
-                                </Link>
-                                <Link to="/catalog/holders">
-                                    <MDBBtn outline size="lg" className="m-2 text-light"
-                                            color={splitLocation[2] === "holders" ? "warning" : "light"}>
-                                        Все Подставочки
-                                    </MDBBtn>
-                                </Link>
+
+                            <HeaderDescription type={splitLocation[2]} />
+
+                            <div className='mb-5 px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
+                                <HeaderButton name="all" text="Все аромапалочки"
+                                              dNone={splitLocation[1] !== 'catalog'} path={splitLocation}/>
+                                <LineBreakCatalog/>
+                                <HeaderButton name="nature" text='"Nature"' path={splitLocation} />
+                                <HeaderButton name="mandir" text='"Mandir"' path={splitLocation} />
+                                <LineBreakCatalog/>
+                                <HeaderButton name="tibetan" text='"Tibetan"' path={splitLocation} />
+                                <HeaderButton name="krishna" text='"Krishna"' path={splitLocation} />
+                                <LineBreakCatalog/>
+                                <HeaderButton name="holders" text="Подставочки"
+                                              dNone={splitLocation[1] !== 'catalog'} path={splitLocation} />
                             </div>
                         </div>
                     </div>

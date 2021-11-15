@@ -55,24 +55,28 @@ const aromaSticks = [
         id: "9",
         name: "Patchouli",
         category: "Nature",
+        description: "Высокогорные цветы",
         image: "https://apricot.com.ua/content/images/31/700x700l80mc0/44777155693058.webp"
     },
     {
         id: "10",
         name: "Poppy",
         category: "Nature",
+        description: "Высокогорные цветы",
         image: "https://apricot.com.ua/content/images/19/700x700l80mc0/39051933581851.webp"
     },
     {
         id: "11",
         name: "Vanilla",
         category: "Nature",
+        description: "Ванильные масала",
         image: "https://apricot.com.ua/content/images/33/700x700l80mc0/27632893563151.webp"
     },
     {
         id: "12",
         name: "Hari Champa",
         category: "Nature",
+        description: "Иланг-иланг",
         image: "https://apricot.com.ua/content/images/28/700x700l80mc0/35818315700923.webp"
     },
     {

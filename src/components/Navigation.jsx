@@ -10,6 +10,7 @@ import {
     MDBNavbarToggler,
     MDBNavbarBrand
 } from 'mdb-react-ui-kit';
+import NavButton from "./NavButton";
 
 const Navigation = props => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -17,7 +18,7 @@ const Navigation = props => {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
     return (
-        <MDBNavbar class="navbar navbar-expand-lg navbar-dark bg-dark" fixed>
+        <MDBNavbar class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixedTop">
             <MDBContainer>
                 <MDBNavbarBrand href='#'>
                     <img className="pe-2"
@@ -44,29 +45,10 @@ const Navigation = props => {
 
                 <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarsExample09">
                     <MDBNavbarNav right fullWidth={false} className='mr-auto mb-2 mb-lg-0'>
-                        <MDBNavbarItem
-                            className={props.path[1] === "catalog" ? "d-none" : "text-center ms-lg-3 mt-3 mt-lg-0"}>
-                            <NavLink to="/catalog/all">
-                                <MDBBtn outline color="warning" className="text-light font-weight-bold">
-                                    Каталог
-                                </MDBBtn>
-                            </NavLink>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem className="text-center ms-lg-3 mt-3 mt-lg-0">
-                            <NavLink to="/signup">
-                                <MDBBtn outline color="warning" className="text-light font-weight-bold">
-                                    О нас
-                                </MDBBtn>
-                            </NavLink>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem className="text-center ms-lg-3 mt-3 mt-lg-0">
-                            <NavLink to="/signup">
-                                <MDBBtn outline color="warning" className="text-light font-weight-bold">
-                                    Доставка
-                                </MDBBtn>
-                            </NavLink>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem className="text-center ms-lg-3 mt-3 mt-lg-0">
+                        <NavButton link="/catalog/all" text="Каталог" dNone={props.path[1] === "catalog"} />
+                        <NavButton link="/signup" text="О Нас" />
+                        <NavButton link="/signup" text="Доставка" />
+                        <MDBNavbarItem className="text-center mt-4 mb-4 mb-lg-0 mt-lg-0 ms-2">
                             <NavLink to="/signup" className="me-2">
                                 <MDBBtn outline floating color="warning">
                                     <MDBIcon className="text-danger" icon='instagram' fab size='lg' /></MDBBtn>
