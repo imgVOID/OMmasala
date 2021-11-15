@@ -27,7 +27,7 @@ const CarouselCaption = (props) => {
     </MDBCarouselCaption>
 }
 
-const JumbotronCarousel = (props) => {
+const HeaderCarousel = (props) => {
     let display = ""
     if (props.dNoneSmall) {
         display =  "d-none d-md-block d-lg-block"
@@ -52,4 +52,4 @@ const JumbotronCarousel = (props) => {
 
 }
 
-export default JumbotronCarousel
+export default HeaderCarousel

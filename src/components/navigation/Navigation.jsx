@@ -32,14 +32,9 @@ const Navigation = props => {
                     </Link>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler
-                    class="custom-toggler navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarsExample09"
-                    aria-controls="navbarsExample09"
-                    aria-expanded={!isNavCollapsed}
-                    aria-label="Toggle navigation"
-                    onClick={handleNavCollapse}>
+                    class="custom-toggler navbar-toggler" onClick={handleNavCollapse} type="button"
+                    data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09"
+                    aria-expanded={!isNavCollapsed} aria-label="Toggle navigation">
                     <MDBIcon icon='bars' fas/>
                 </MDBNavbarToggler>
 

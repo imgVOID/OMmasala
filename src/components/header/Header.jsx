@@ -1,10 +1,10 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
 import {Switch, Route} from 'react-router-dom';
-import Navigation from "./Navigation";
-import JumbotronCarousel from "./JumbotronCarousel";
-import JumbotronStatic from "./JumbotronStatic";
-import Catalog from "../pages/Catalog";
+import Navigation from "../navigation/Navigation";
+import HeaderCarousel from "./HeaderCarousel";
+import HeaderStatic from "./HeaderStatic";
+import Catalog from "../../pages/Catalog";
 
 
 export default function Header() {
@@ -19,15 +19,15 @@ export default function Header() {
             <Navigation path={splitLocation}/>
             <Switch>
                 <Route path='/catalog' component={Catalog}>
-                    <JumbotronStatic path={splitLocation}/>
+                    <HeaderStatic path={splitLocation}/>
                 </Route>
                 <Route exact path='/'>
-                    <JumbotronCarousel path={splitLocation} dNoneSmall={true}/>
-                    <JumbotronStatic path={splitLocation} dNoneBig={true}/>
+                    <HeaderCarousel path={splitLocation} dNoneSmall={true}/>
+                    <HeaderStatic path={splitLocation} dNoneBig={true}/>
                 </Route>
                 <Route exact path='/signup'>
-                    <JumbotronCarousel path={splitLocation} dNoneSmall={true}/>
-                    <JumbotronStatic path={splitLocation} dNoneBig={true}/>
+                    <HeaderCarousel path={splitLocation} dNoneSmall={true}/>
+                    <HeaderStatic path={splitLocation} dNoneBig={true}/>
                 </Route>
             </Switch>
         </header>

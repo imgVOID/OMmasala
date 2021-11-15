@@ -1,5 +1,5 @@
 import React from "react";
-import MasonryGrid from "../components/MasonryGrid";
+import MasonryGrid from "../components/content/MasonryGrid";
 import { Switch, Route } from 'react-router-dom';
 
 const aromaSticks = [

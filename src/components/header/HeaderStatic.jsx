@@ -2,7 +2,7 @@ import React from "react";
 import HeaderDescription from "./HeaderDescription";
 import HeaderButton from "./HeaderButton";
 
-const JumbotronStatic = (props) => {
+const HeaderStatic = (props) => {
     let display = ""
     if (props.dNoneBig) {
         display = "d-lg-none d-md-none"
@@ -38,4 +38,4 @@ const JumbotronStatic = (props) => {
 
 }
 
-export default JumbotronStatic
+export default HeaderStatic

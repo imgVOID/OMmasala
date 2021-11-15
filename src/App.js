@@ -1,6 +1,6 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
-import Header from "./components/Header"
+import Header from "./components/header/Header"
 import { Switch, Route } from 'react-router-dom';
 import Test from './components/Test';
 import Catalog from "./pages/Catalog";
