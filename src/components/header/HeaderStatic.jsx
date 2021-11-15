@@ -23,11 +23,11 @@ const HeaderStatic = (props) => {
                         <HeaderButton name="all" text="Все аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none`}/>
-                        <HeaderButton name="nature" text='Nature' path={props.path} header={header}/>
-                        <HeaderButton name="mandir" text='Mandir' path={props.path} header={header}/>
+                        <HeaderButton name="nature" text='Nature' path={props.path} bold={true} header={header}/>
+                        <HeaderButton name="mandir" text='Mandir' path={props.path} bold={true} header={header}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="tibetan" text='Tibetan' path={props.path} header={header}/>
-                        <HeaderButton name="krishna" text='Krishna' path={props.path} header={header}/>
+                        <HeaderButton name="tibetan" text='Tibetan' path={props.path} bold={true} header={header}/>
+                        <HeaderButton name="krishna" text='Krishna' path={props.path} bold={true} header={header}/>
                         <br className={`d-lg-none d-md-none`}/>
                         <HeaderButton name="holders" text="Подставочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
