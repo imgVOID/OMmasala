@@ -11,9 +11,9 @@ const HeaderStatic = props => {
     return <div className={'text-center bg-image shadow mt-4 jumbotron-static ' + display}
                 style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')", height: 450}}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
-            <div className='d-flex justify-content-center align-items-center h-100 pt-5'>
+            <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-1 mt-lg-5'>
                 <div className='container text-white px-3'>
-                    <h1 className='headerTitle m-0 p-0 mt-3 mt-lg-0 mt-md-0'>
+                    <h1 className='headerTitle m-0 p-0 mt-lg-0 mt-md-0'>
                         Om MASALA
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
