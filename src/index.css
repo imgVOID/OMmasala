@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Yuji+Mai&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+
 body {
   margin: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -29,6 +32,50 @@ code {
   z-index: 1;
 }
 
+.navLink {
+  font-family: 'Arial Black', serif !important;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
+  0px 8px 13px rgba(37,37,37,0.1),
+  0px 18px 23px rgba(37,37,37,0.1);
+}
+
 .navbar-toggler {
   z-index: 2;
+}
+
+.navTitle {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
+  0px 8px 13px rgba(37,37,37,0.1),
+  0px 18px 23px rgba(37,37,37,0.1);
+}
+
+.headerTitle {
+  font-family: 'Yuji Mai', cursive;
+  text-shadow: 0px 1px 3px rgba(37,37,37,0.7),
+  0px 8px 13px rgba(37,37,37,0.1),
+  0px 18px 23px rgba(37,37,37,0.1);
+}
+
+.navLink {
+  font-family: 'Arial', serif !important;
+}
+
+.headerDescription {
+  font-family: 'Caveat', serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
+  0px 8px 13px rgba(37,37,37,0.1),
+  0px 18px 23px rgba(37,37,37,0.1);
+}
+
+.headerButton {
+  font-family: 'Arial', 'Caveat', serif;
+
+}
+
+.cardDescription {
+  font-family: 'Caveat', cursive;
 }

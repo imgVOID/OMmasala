@@ -5,19 +5,19 @@ import {Switch, Route} from 'react-router-dom';
 import Test from './components/Test';
 import Catalog from "./pages/Catalog";
 
+function Meta() {
+    return <Helmet>
+        <meta name="description" content="Web site created using create-react-app"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#fafafa"/>
+        <meta charSet="utf-8"/>
+    </Helmet>
+}
+
 function App() {
     return (
         <div className="App">
-            <Helmet>
-                <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"/>
-                <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-                <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
-                <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet"/>
-                <meta name="description" content="Web site created using create-react-app" />
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <style>{'body { background-color: #fafafa; }'}</style>
-            </Helmet>
+            <Meta/>
             <section className="Header">
                 <Header/>
             </section>

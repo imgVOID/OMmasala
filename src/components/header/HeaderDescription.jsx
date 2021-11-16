@@ -2,45 +2,40 @@ import React from 'react';
 
 const description = {
     "all" : {
-        "text": "наборы пыльцовых аромапалочек ручной работы",
-        "styles": "font-italic text-warning px-3"
-    },
-    "global": {
-        "text": "индийские пыльцовые благовония ручной работы",
-        "styles": "font-italic text-warning px-5 mx-5"
+        "text": `индийские пыльцовые аромапалочки ручной работы`,
+        "styles": "mx-3"
     },
     "nature": {
         "text": "натуральные аромапалочки масала с единым ароматом",
-        "styles": "font-italic text-warning px-5 mx-4"
+        "styles": "mx-4"
     },
     "tibetan": {
         "text": "пыльцовые аромапалочки с высокогорными растениями",
-        "styles": "font-italic text-warning px-5 mx-4"
+        "styles": "mx-4"
     },
     "krishna": {
         "text": "аромакомпозиции масала в честь бога Кришны",
-        "styles": "font-italic text-warning px-5 mx-4"
+        "styles": "mx-4"
     },
     "mandir": {
         "text": "пыльцовые аромапалочки масала из храмов Индии",
-        "styles": "font-italic text-warning px-5 mx-4"
+        "styles": "mx-4"
     },
     "holders": {
-        "text": "подставки для аромапалочек из дерева, металла и керамики",
-        "styles": "font-italic text-warning px-5"
+        "text": "подставки для аромапалочек",
+        "styles": "mx-5"
     }
 }
 
-const HeaderDescription = (props) => {
-
+const HeaderDescription = props => {
     if (props.type in description) {
-        return <h5 className={description[props.type]["styles"]}>
+        return <h2 className={"headerDescription text-warning m-0 px-5 " + description[props.type]["styles"]}>
             {description[props.type]["text"]}
-        </h5>
+        </h2>
     } else {
-        return <h5 className="font-italic text-warning px-5">
+        return <h2 className="headerDescription text-warning m-0">
             индийские пыльцовые благовония <br className="d-md-none d-lg-none"/> ручной работы
-        </h5>
+        </h2>
     }
 }
 

@@ -22,11 +22,10 @@ const Card = props => {
                 <MDBCardBody className="text-center">
                     <MDBCardTitle className="text-uppercase mb-1">
                         {props.category}
-                        <br className={props.category === "Mandir" ? "" : "d-none"}/>
                         <b> {props.name}</b>
                     </MDBCardTitle>
-                    <MDBCardText className="text-lowercase px-2">
-                        <i>{props.description}</i>
+                    <MDBCardText className="cardDescription text-lowercase px-2 pt-1">
+                        <h4>{props.description}</h4>
                     </MDBCardText>
                     <MDBBtnGroup shadow="0" className="mb-3">
                         <MDBBtn href='#' color="warning" size="sm"

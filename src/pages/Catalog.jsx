@@ -143,29 +143,29 @@ const aromaSticks = [
 const aromaHolders = [
     {
         id: "101",
-        name: "Лыжа \"Лист\"",
-        description: "Древесина манго",
+        name: "Лист",
+        description: "Лыжа из древесины манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/32/700x700l80mc0/20151366879052.webp"
     },
     {
         id: "102",
-        name: "Лыжа \"Звезда\"",
-        description: "Палисандр (розовое дерево)",
+        name: "Звезда",
+        description: "Лыжла из палисандра (розовое дерево)",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/15/600x600l80mc0/85548171893188.webp"
     },
     {
         id: "103",
-        name: "Лыжа \"Колос\"",
-        description: "Древесина манго",
+        name: "Колос",
+        description: "Лыжа из древесины манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/14/700x700l80mc0/86736614453737.webp"
     },
     {
         id: "104",
-        name: "Тарелка \"Цветок\"",
-        description: "Алюминий",
+        name: "Цветок",
+        description: "Тарелка из алюминия",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/12/700x700l80mc0/14551801769655.webp"
     },

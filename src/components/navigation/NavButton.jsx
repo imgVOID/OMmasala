@@ -3,10 +3,12 @@ import {MDBBtn, MDBNavbarItem} from "mdb-react-ui-kit";
 import {NavLink} from "react-router-dom";
 
 const NavButton = props => {
-    if (props.dNone !== true){
-        return <MDBNavbarItem className="text-center py-lg-0">
-            <NavLink to={props.link}>
-                <MDBBtn outline color="dark" className="text-warning font-weight-bold w-100 h-100 py-3 py-lg-0" onClick={props.onClick}>
+    if (props.dNone !== true) {
+        return <MDBNavbarItem className="text-center px-2">
+            <NavLink to={props.link} className="text-warning d-inline-block w-100 h-100"
+                     onClick={props.onClick}>
+                <MDBBtn className="navLink text-warning shadow-0 font-weight-bold w-100 h-100"
+                        outline color="dark">
                     {props.text}
                 </MDBBtn>
             </NavLink>

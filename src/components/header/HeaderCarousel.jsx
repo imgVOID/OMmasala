@@ -10,13 +10,13 @@ import HeaderButton from "./HeaderButton";
 
 const CarouselCaption = props => {
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
-        <div style={{"height": "32%"}} className="d-md-none d-lg-block"/>
-        <h1 className={'mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
-            OM MASALA
+        <div style={{"height": "30%"}} className="d-md-none d-lg-block"/>
+        <h1 className={'headerTitle mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
+            Om MASALA
         </h1>
-        <h5 className={'font-italic text-warning px-5 mx-4 align-bottom'}>
+        <h2 className={'headerDescription text-warning px-5 mx-4 align-bottom'}>
             {props.text}
-        </h5>
+        </h2>
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
             <HeaderButton name="nature" text='Nature' color="warning" bold={true} path={props.path}/>
             <HeaderButton name="mandir" text='Mandir' color="warning" bold={true} path={props.path}/>
@@ -33,15 +33,15 @@ const HeaderCarousel = props => {
         display =  "d-none d-md-block d-lg-block"
     }
     if (props.dNoneSmall) {
-        return <MDBCarousel className={"mt-5 pt-2 " + display} fade showControls showIndicators interval={4600}>
+        return <MDBCarousel className={"mt-4 d-none d-lg-block d-md-block" + display} fade showControls showIndicators interval={4600}>
             <MDBCarouselInner>
                 <MDBCarouselItem className='active'>
-                    <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}/>
+                    <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.75)'}}/>
                     <MDBCarouselElement src='https://mdbcdn.b-cdn.net/img/new/slides/041.jpg' alt='...'/>
                     <CarouselCaption path={props.path} text="индийские пыльцовые благовония ручной работы"/>
                 </MDBCarouselItem>
                 <MDBCarouselItem>
-                    <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}/>
+                    <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.75)'}}/>
                     <MDBCarouselElement src='https://mdbcdn.b-cdn.net/img/new/slides/042.jpg' alt='...'/>
                     <CarouselCaption path={props.path} text="индийские пыльцовые благовония ручной работы"/>
                 </MDBCarouselItem>
