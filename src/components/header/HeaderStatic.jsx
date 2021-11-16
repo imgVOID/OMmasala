@@ -8,8 +8,7 @@ const HeaderStatic = props => {
     if (props.dNoneBig) {
         display = "d-lg-none d-md-none"
     }
-    return <div className={'text-center bg-image shadow mt-4 jumbotron-static ' + display}
-                style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')", height: 420}}>
+    return <div className={'headerImage text-center bg-image shadow mt-4 jumbotron-static ' + display}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
             <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-1 mt-lg-5'>
                 <div className='container text-white px-3'>
