@@ -6,13 +6,13 @@ import {MDBContainer} from "mdb-react-ui-kit";
 
 const MasonryGrid = props => {
     return (
-        <MDBContainer className="Grid">
+        <MDBContainer className="Grid mt-3">
             <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 4}}>
                 <Masonry>
                     {props.cards.map((card) => {
                         return (
                             <Card key={card.id} className={card.category}
-                                  name={card.category + ' ' + card.name}
+                                  name={card.name} category={card.category}
                                   image={card.image} description={card.description}/>
                         );
                     })}

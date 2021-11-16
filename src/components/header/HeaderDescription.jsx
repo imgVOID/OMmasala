@@ -2,7 +2,7 @@ import React from 'react';
 
 const description = {
     "all" : {
-        "text": "наборы из 10-ти пыльцовых аромапалочек ручной работы",
+        "text": "наборы пыльцовых аромапалочек ручной работы",
         "styles": "font-italic text-warning px-3"
     },
     "global": {
@@ -14,7 +14,7 @@ const description = {
         "styles": "font-italic text-warning px-5 mx-4"
     },
     "tibetan": {
-        "text": "экологичные высокогорные аромакомпозиции масала",
+        "text": "пыльцовые аромапалочки с высокогорными растениями",
         "styles": "font-italic text-warning px-5 mx-4"
     },
     "krishna": {

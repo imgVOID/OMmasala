@@ -16,3 +16,19 @@ code {
   z-index:100;
   width: 100%;
 }
+
+.closeMenuArea {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0
+}
+
+#navbar {
+  z-index: 1;
+}
+
+.navbar-toggler {
+  z-index: 2;
+}

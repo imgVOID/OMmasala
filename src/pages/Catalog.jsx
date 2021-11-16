@@ -25,6 +25,7 @@ const aromaSticks = [
         id: "4",
         name: "Eucalyptus",
         category: "Nature",
+        description: "листья и масло эвкалипта",
         image: "https://apricot.com.ua/content/images/30/700x700l80mc0/73653555037934.webp"
     },
     {
@@ -43,40 +44,42 @@ const aromaSticks = [
         id: "7",
         name: "Frankincense",
         category: "Nature",
+        description: "ладан, смола Босвелии",
         image: "https://apricot.com.ua/content/images/15/700x700l80mc0/98530947482506.webp"
     },
     {
         id: "8",
-        name: "Holy Basil",
+        name: "Tulasi",
         category: "Nature",
+        description: "базилик священный",
         image: "https://apricot.com.ua/content/images/25/700x700l80mc0/28291738732553.webp"
     },
     {
         id: "9",
         name: "Patchouli",
         category: "Nature",
-        description: "Высокогорные цветы",
+        description: "листья пачули",
         image: "https://apricot.com.ua/content/images/31/700x700l80mc0/44777155693058.webp"
     },
     {
         id: "10",
         name: "Poppy",
         category: "Nature",
-        description: "Высокогорные цветы",
+        description: "Семена мака",
         image: "https://apricot.com.ua/content/images/19/700x700l80mc0/39051933581851.webp"
     },
     {
         id: "11",
         name: "Vanilla",
         category: "Nature",
-        description: "Ванильные масала",
+        description: "Цветы и плоды ванили",
         image: "https://apricot.com.ua/content/images/33/700x700l80mc0/27632893563151.webp"
     },
     {
         id: "12",
-        name: "Hari Champa",
+        name: "Ylang-Ylang",
         category: "Nature",
-        description: "Иланг-иланг",
+        description: "Цветы иланг-иланга",
         image: "https://apricot.com.ua/content/images/28/700x700l80mc0/35818315700923.webp"
     },
     {
@@ -104,7 +107,7 @@ const aromaSticks = [
         id: "16",
         name: "Love",
         category: "Krishna",
-        description: "Лотос, базилик священный, сандал и жасмин",
+        description: "Лотос, туласи, сандал и жасмин",
         image: "https://apricot.com.ua/content/images/20/700x700l80mc0/61831897678901.webp"
     },
     {
@@ -140,25 +143,29 @@ const aromaSticks = [
 const aromaHolders = [
     {
         id: "101",
-        name: "\"Лист\", манго",
+        name: "Лыжа \"Лист\"",
+        description: "Древесина манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/32/700x700l80mc0/20151366879052.webp"
     },
     {
         id: "102",
-        name: "\"Лыжа\", палисандр",
+        name: "Лыжа \"Звезда\"",
+        description: "Палисандр (розовое дерево)",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/15/600x600l80mc0/85548171893188.webp"
     },
     {
         id: "103",
-        name: "\"Колос\", манго",
+        name: "Лыжа \"Колос\"",
+        description: "Древесина манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/14/700x700l80mc0/86736614453737.webp"
     },
     {
         id: "104",
-        name: "\"Цветок\", алюминий",
+        name: "Тарелка \"Цветок\"",
+        description: "Алюминий",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/12/700x700l80mc0/14551801769655.webp"
     },

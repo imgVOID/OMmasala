@@ -8,7 +8,7 @@ import {
 } from 'mdb-react-ui-kit';
 import HeaderButton from "./HeaderButton";
 
-const CarouselCaption = (props) => {
+const CarouselCaption = props => {
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
         <div style={{"height": "32%"}} className="d-md-none d-lg-block"/>
         <h1 className={'mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
@@ -27,13 +27,13 @@ const CarouselCaption = (props) => {
     </MDBCarouselCaption>
 }
 
-const HeaderCarousel = (props) => {
+const HeaderCarousel = props => {
     let display = ""
     if (props.dNoneSmall) {
         display =  "d-none d-md-block d-lg-block"
     }
     if (props.dNoneSmall) {
-        return <MDBCarousel className={"mt-5 pt-2 " + display} fade showControls showIndicators interval={3000}>
+        return <MDBCarousel className={"mt-5 pt-2 " + display} fade showControls showIndicators interval={4600}>
             <MDBCarouselInner>
                 <MDBCarouselItem className='active'>
                     <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}/>

@@ -2,8 +2,8 @@ import React from "react";
 import {MDBBtn} from "mdb-react-ui-kit";
 import {Link} from "react-router-dom";
 
-const HeaderButton = (props) => {
-    let color = ""
+const HeaderButton = props => {
+    let color
     if (props.color) {
         color = props.color
     } else {
