@@ -20,14 +20,15 @@ const Card = props => {
                     </a>
                 </MDBRipple>
                 <MDBCardBody className="text-center">
-                    <MDBCardTitle className="text-uppercase mb-1">
+                    <MDBCardTitle className="text-uppercase">
                         {props.category}
                         <b> {props.name}</b>
                     </MDBCardTitle>
-                    <MDBCardText className="cardDescription text-lowercase px-2 pt-1">
-                        <h4>{props.description}</h4>
+                    <MDBCardText className="cardDescription text-lowercase px-2">
+                        <h4 className="d-none d-md-block d-lg-block">{props.description}</h4>
+                        <h2 className="d-md-none d-lg-none">{props.description}</h2>
                     </MDBCardText>
-                    <MDBBtnGroup shadow="0" className="mb-3">
+                    <MDBBtnGroup shadow="0" className="mb-4 mt-1">
                         <MDBBtn href='#' color="warning" size="sm"
                                 className="shadow text-lowercase">
                             x10
