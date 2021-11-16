@@ -29,7 +29,7 @@ const description = {
 
 const HeaderDescription = props => {
     if (props.type in description) {
-        return <h2 className={"headerDescription text-warning m-0 px-5 " + description[props.type]["styles"]}>
+        return <h2 className={"headerDescription text-warning m-0 px-5" + description[props.type]["styles"]}>
             {description[props.type]["text"]}
         </h2>
     } else {
