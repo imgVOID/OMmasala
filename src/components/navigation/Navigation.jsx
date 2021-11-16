@@ -8,8 +8,7 @@ import {
     MDBNavbarItem,
     MDBBtn,
     MDBNavbarToggler,
-    MDBNavbarBrand,
-    MDBBtnGroup
+    MDBNavbarBrand
 } from 'mdb-react-ui-kit';
 import NavButton from "./NavButton";
 
@@ -44,7 +43,7 @@ const Navigation = props => {
 
                 <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbar">
                     <div className="closeMenuArea d-md-none d-lg-none" onClick={handleNavCollapse}/>
-                    <MDBNavbarNav right fullWidth={false} className='mr-auto mb-2 mb-lg-0'>
+                    <MDBNavbarNav right fullWidth={false} className='pb-3 pb-lg-0 mt-3 mt-lg-0'>
 
                         <NavButton text="Каталог" link="/catalog/all" dNone={props.path[1] === "catalog"}
                                    onClick={closeNav}/>

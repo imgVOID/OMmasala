@@ -2,7 +2,7 @@ import React from 'react';
 
 const description = {
     "all" : {
-        "text": `натуральные индийские пыльцовые аромапалочки ручной работы`,
+        "text": `индийские пыльцовые аромапалочки в Украине`,
         "styles": "mx-3"
     },
     "nature": {
