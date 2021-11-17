@@ -31,10 +31,11 @@ const Navigation = props => {
                     <NavBrand onClick={closeNav}/>
                     <div className={`${props.path[1] !== "catalog" ? "d-none" : ""} w-100 d-md-none d-lg-none`}/>
                     <MDBBadge id="navbarSecondText"
-                              className={`${props.path[1] !== "catalog" ? "d-none" : ""} mt-0 mb-2 my-md-0 my-lg-0`}>
+                              className={`${props.path[1] !== "catalog" ? "d-none" : ""} mt-0 mb-1 my-md-0 my-lg-0`}>
                         <h4 className="p-lg-0 m-0">10 аромапалочек за 50 гривен</h4>
                     </MDBBadge>
-                    <NavToggler handleNavCollapse={handleNavCollapse} isNavCollapsed={isNavCollapsed}/>
+                    <NavToggler handleNavCollapse={handleNavCollapse}
+                                isNavCollapsed={isNavCollapsed} path={props.path}/>
                     <div id="navbarCollapse"
                          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
                         <MDBNavbarNav right fullWidth={false} className='navContent pb-3 pb-lg-0 mt-4 mt-lg-0'>
