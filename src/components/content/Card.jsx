@@ -26,16 +26,16 @@ const Card = props => {
                     </MDBCardTitle>
                     <MDBCardText className="cardDescription text-lowercase px-2 mb-3">
                         <h4 className="d-none d-md-block d-lg-block m-0 p-0 pb-1">{props.description}</h4>
-                        <h2 className="d-md-none d-lg-none m-0 p-0 pb-1">{props.description}</h2>
+                        <h2 className="d-md-none d-lg-none m-0 p-0 pb-2">{props.description}</h2>
                     </MDBCardText>
-                    <MDBBtnGroup shadow="0" className="mb-3">
+                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-3`}>
                         <MDBBtn href='#' color="warning" size="sm" style={{"font-family":"'Arial', serif"}}
                                 className="shadow text-lowercase">
                             10
                         </MDBBtn>
                         <MDBBtn href='#' size="sm" color="warning" outline className="font-weight-bold"
                                 style={{"color": "#4e4e4e", "font-family":"'Arial', serif"}}>
-                            50 ₴
+                            {props.price} ₴
                         </MDBBtn>
                     </MDBBtnGroup>
                 </MDBCardBody>
