@@ -12,7 +12,7 @@ const NavSocial = props => {
             <MDBBtn outline floating color="warning" size="sm" className="navSocialLink shadow">
                 <MDBIcon className="text-info" icon='envelope' fas size='md'/></MDBBtn>
         </NavLink>
-        <NavLink to="/signup" onClick={props.closeNav} className="mx-1">
+        <NavLink to="/signup" onClick={props.closeNav} className="ms-1">
             <MDBBtn outline floating color="warning" size="sm" className="navSocialLink shadow">
                 <MDBIcon className="text-success" icon='phone' fas size='md'/></MDBBtn>
         </NavLink>

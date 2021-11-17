@@ -8,11 +8,11 @@ const HeaderStatic = props => {
     if (props.dNoneBig) {
         display = "d-lg-none d-md-none"
     }
-    return <div className={'headerImage text-center bg-image shadow mt-5 mt-md-4 mt-lg-4 jumbotron-static ' + display}>
+    return <div className={'headerImage text-center bg-image shadow mt-5 jumbotron-static ' + display}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
             <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-4'>
                 <div className='container text-white px-3'>
-                    <h1 className='titleHeader m-0 p-0 mt-4 mt-lg-0 mt-md-0'>
+                    <h1 className={`${props.path[1] === "catalog" ? "mt-5" : ""} titleHeader mb-0 p-0 mt-lg-0 mt-md-0`}>
                         OM MASALA
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
