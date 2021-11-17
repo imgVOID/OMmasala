@@ -10,11 +10,11 @@ const description = {
         "styles": "mx-4"
     },
     "tibetan": {
-        "text": "пыльцовые аромапалочки с высокогорными растениями",
+        "text": "аромакомпозиции из высокогорных цветов",
         "styles": "mx-4"
     },
     "krishna": {
-        "text": "аромакомпозиции масала в честь бога Кришны",
+        "text": "аромакомпозиции масала в честь Кришны",
         "styles": "mx-4"
     },
     "mandir": {
@@ -29,7 +29,7 @@ const description = {
 
 const HeaderDescription = props => {
     if (props.type in description) {
-        return <h2 className={"headerDescription text-warning m-0 px-5 " + description[props.type]["styles"]}>
+        return <h2 className={"headerDescription text-warning m-0 px-3 " + description[props.type]["styles"]}>
             {description[props.type]["text"]}
         </h2>
     } else {
