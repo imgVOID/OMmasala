@@ -29,9 +29,6 @@ code {
   z-index: 0
 }
 
-#navbar {
-  z-index: 1;
-}
 
 .navLink {
   font-family: 'Arial Black', serif !important;
@@ -42,7 +39,15 @@ code {
 }
 
 .navbar-toggler {
-  z-index: 2;
+  z-index: 1;
+}
+
+.navSocialLink {
+  z-index: 1;
+}
+
+.navImage {
+  z-index: 1;
 }
 
 .titleNav {
@@ -53,7 +58,6 @@ code {
   0 8px 13px rgba(37,37,37,0.1),
   0 18px 23px rgba(37,37,37,0.1);
 }
-
 
 
 .titleHeader {
@@ -86,5 +90,12 @@ code {
 
 .headerImage {
   background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-  height: 330px;
+  height: 450px;
+}
+
+@media screen and (min-width: 900px) {
+  .headerImage {
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+    height: 330px;
+  }
 }

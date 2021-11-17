@@ -33,30 +33,30 @@ const Navigation = props => {
                 <NavBrand/>
                 <NavToggler handleNavCollapse={handleNavCollapse} isNavCollapsed={isNavCollapsed}/>
 
-                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbar">
-                    <div className="closeMenuArea d-lg-none" onClick={handleNavCollapse}/>
-                    <MDBNavbarNav right fullWidth={false} className='pb-3 pb-lg-0 mt-4 mt-lg-0'>
+                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse shadow-lg`} id="navbar">
+                    <MDBNavbarNav right fullWidth={false} className='navContent pb-3 pb-lg-0 mt-4 mt-lg-0'>
                         <NavButton text="Каталог" link="/catalog/all" dNone={props.path[1] === "catalog"}
                                    onClick={closeNav}/>
                         <NavButton text="О Нас" link="/signup" onClick={closeNav}/>
                         <NavButton text="Новости" link="/signup" onClick={closeNav}/>
                         <NavButton text="Доставка" link="/signup" onClick={closeNav}/>
 
-                        <MDBNavbarItem className="text-center mt-4 mb-5 my-lg-2 ms-2">
-                            <NavLink to="/signup" className="me-2" onClick={closeNav}>
-                                <MDBBtn outline floating color="warning" size="sm" className="shadow">
+                        <MDBNavbarItem className="navSocialLink d-block text-center pt-4 pb-5 py-lg-2">
+                            <NavLink to="/signup" className="mx-2" onClick={closeNav}>
+                                <MDBBtn outline floating color="warning" size="sm" className="navSocialLink shadow">
                                     <MDBIcon className="text-danger" icon='instagram' fab size='md'/></MDBBtn>
                             </NavLink>
-                            <NavLink to="/signup" className="me-2" onClick={closeNav}>
-                                <MDBBtn outline floating color="warning" size="sm" className="shadow">
+                            <NavLink to="/signup" className="mx-2" onClick={closeNav}>
+                                <MDBBtn outline floating color="warning" size="sm" className="navSocialLink shadow">
                                     <MDBIcon className="text-info" icon='envelope' fas size='md'/></MDBBtn>
                             </NavLink>
-                            <NavLink to="/signup" onClick={closeNav}>
-                                <MDBBtn outline floating color="warning" size="sm" className="shadow">
+                            <NavLink to="/signup" onClick={closeNav} className="mx-2">
+                                <MDBBtn outline floating color="warning" size="sm" className="navSocialLink shadow">
                                     <MDBIcon className="text-success" icon='phone' fas size='md'/></MDBBtn>
                             </NavLink>
                         </MDBNavbarItem>
                     </MDBNavbarNav>
+                    <div className="d-lg-none d-block closeMenuArea" onClick={handleNavCollapse}/>
                 </div>
             </MDBContainer>
         </MDBNavbar>
