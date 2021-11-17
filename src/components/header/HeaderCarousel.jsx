@@ -11,18 +11,22 @@ import HeaderButton from "./HeaderButton";
 const CarouselCaption = props => {
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
         <div style={{"height": "30%"}} className="d-md-none d-lg-block"/>
-        <h1 className={'headerTitle mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
+        <h1 className={'titleHeader mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
             Om MASALA
         </h1>
         <h2 className={'headerDescription text-warning px-5 mx-4 align-bottom'}>
             {props.text}
         </h2>
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
-            <HeaderButton name="nature" text='Nature' color="warning" bold={true} path={props.path}/>
-            <HeaderButton name="mandir" text='Mandir' color="warning" bold={true} path={props.path}/>
+            <HeaderButton name="nature" text='Nature' color="warning" path={props.path} size="lg"
+                          style={{"font-family":"'Yuji Mai', cursive"}}/>
+            <HeaderButton name="mandir" text='Mandir' color="warning" path={props.path} size="lg"
+                          style={{"font-family":"'Yuji Mai', cursive"}}/>
             <br className="d-lg-none"/>
-            <HeaderButton name="tibetan" text='Tibetan' color="warning" bold={true} path={props.path}/>
-            <HeaderButton name="krishna" text='Krishna' color="warning" bold={true} path={props.path}/>
+            <HeaderButton name="tibetan" text='Tibetan' color="warning" path={props.path} size="lg"
+                          style={{"font-family":"'Yuji Mai', cursive"}}/>
+            <HeaderButton name="krishna" text='Krishna' color="warning" path={props.path} size="lg"
+                          style={{"font-family":"'Yuji Mai', cursive"}}/>
         </div>
     </MDBCarouselCaption>
 }

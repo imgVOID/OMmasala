@@ -20,21 +20,21 @@ const Card = props => {
                     </a>
                 </MDBRipple>
                 <MDBCardBody className="text-center">
-                    <MDBCardTitle className="text-uppercase">
+                    <MDBCardTitle className="text-uppercase m-0 p-0 pb-1 pt-2">
                         {props.category}
                         <b> {props.name}</b>
                     </MDBCardTitle>
-                    <MDBCardText className="cardDescription text-lowercase px-2">
-                        <h4 className="d-none d-md-block d-lg-block">{props.description}</h4>
-                        <h2 className="d-md-none d-lg-none">{props.description}</h2>
+                    <MDBCardText className="cardDescription text-lowercase px-2 mb-3">
+                        <h4 className="d-none d-md-block d-lg-block m-0 p-0 pb-1">{props.description}</h4>
+                        <h2 className="d-md-none d-lg-none m-0 p-0 pb-1">{props.description}</h2>
                     </MDBCardText>
                     <MDBBtnGroup shadow="0" className="mb-3">
-                        <MDBBtn href='#' color="warning" size="sm"
+                        <MDBBtn href='#' color="warning" size="sm" style={{"font-family":"'Arial', serif"}}
                                 className="shadow text-lowercase">
-                            x10
+                            10
                         </MDBBtn>
-                        <MDBBtn href='#' size="sm" color="warning" outline
-                                className="font-weight-bold" style={{"color": "#4e4e4e"}}>
+                        <MDBBtn href='#' size="sm" color="warning" outline className="font-weight-bold"
+                                style={{"color": "#4e4e4e", "font-family":"'Arial', serif"}}>
                             50 ₴
                         </MDBBtn>
                     </MDBBtnGroup>

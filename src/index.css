@@ -23,6 +23,7 @@ code {
 .closeMenuArea {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0
@@ -44,15 +45,18 @@ code {
   z-index: 2;
 }
 
-.navTitle {
+.titleNav {
   font-family: 'Caveat', cursive;
   font-weight: 400;
+  z-index: 2;
   text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
   0 8px 13px rgba(37,37,37,0.1),
   0 18px 23px rgba(37,37,37,0.1);
 }
 
-.headerTitle {
+
+
+.titleHeader {
   font-family: 'Yuji Mai', cursive;
   text-shadow: 0 1px 3px rgba(37,37,37,0.7),
   0 8px 13px rgba(37,37,37,0.1),
@@ -82,12 +86,5 @@ code {
 
 .headerImage {
   background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-  height: 500px;
-}
-
-@media screen and (min-width: 900px) {
-  .headerImage {
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-    height: 400px;
-  }
+  height: 330px;
 }

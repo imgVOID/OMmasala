@@ -15,7 +15,7 @@ const HeaderButton = props => {
 
     if (props.dNone !== true){
         return <Link to={`/catalog/${props.name}`}>
-            <MDBBtn outline size="lg" color={color}
+            <MDBBtn outline color={color} size={props.size} style={props.style}
                     className={`${props.bold ? "font-weight-bold" : ""} headerButton m-2 text-light text-uppercase`}>
                 {props.text}
             </MDBBtn>

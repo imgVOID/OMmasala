@@ -10,13 +10,13 @@ const HeaderStatic = props => {
     }
     return <div className={'headerImage text-center bg-image shadow mt-4 jumbotron-static ' + display}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
-            <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-1 mt-lg-5'>
+            <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-4'>
                 <div className='container text-white px-3'>
-                    <h1 className='headerTitle m-0 p-0 mt-lg-0 mt-md-0'>
+                    <h1 className='titleHeader m-0 p-0 mt-1 mt-lg-0 mt-md-0'>
                         Om MASALA
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
-                    <div className='pb-5 pb-lg-0 pb-md-0'>
+                    <div className='pb-5 pb-lg-0 pb-md-0 mt-1'>
                         <HeaderButton name="all" text="Аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none d-md-none`}/>
