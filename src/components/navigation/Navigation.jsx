@@ -26,9 +26,13 @@ const Navigation = props => {
 
     return (
         <>
-            <MDBNavbar fixed='top' bgColor="dark" light className='navbar-expand-lg my-0 py-0 p-5' id="navbar">
+            <MDBNavbar fixed='top' bgColor="dark" light className='navbar-expand-lg my-0 px-4 py-0 ' id="navbar">
                 <MDBContainer className="my-0 py-0">
                     <NavBrand onClick={closeNav}/>
+                    <div className="w-100 d-md-none d-lg-none"/>
+                    <MDBBadge id="navbarSecondText" className="mt-0 mb-2 my-md-0 my-lg-0 d-inline-block">
+                        <h4 className="p-lg-0 m-0">10 аромапалочек за 50 гривен</h4>
+                    </MDBBadge>
                     <NavToggler handleNavCollapse={handleNavCollapse} isNavCollapsed={isNavCollapsed}/>
                     <div id="navbarCollapse"
                          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
@@ -42,16 +46,6 @@ const Navigation = props => {
                         </MDBNavbarNav>
                         <div className="d-lg-none d-block closeMenuArea" onClick={handleNavCollapse}/>
                     </div>
-                </MDBContainer>
-            </MDBNavbar>
-            <MDBNavbar fixed='top' light id={"navbarSecond"}
-                       className={`${props.path[1] !== 'catalog' ? "d-none" : ""} navbar-expand m-0 shadow-0`}>
-                <MDBContainer
-                    className="justify-content-end">
-                    <MDBBadge pill color="dark" id="navbarSecondText" className="text-warning px-4">
-                        <h3 className="p-0 m-0">50 гривен за 10 штук</h3>
-                    </MDBBadge>
-
                 </MDBContainer>
             </MDBNavbar>
         </>

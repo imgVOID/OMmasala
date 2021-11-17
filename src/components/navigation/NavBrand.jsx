@@ -8,7 +8,7 @@ const NavBrand = props => {
         <img className="navImage pe-2" height='30' alt='' loading='lazy'
              src='https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.png' />
         <NavLink className="titleNav text-warning text-capitalize p-0 m-0" onClick={props.onClick} to="/">
-            <h4 className="mt-auto p-0 m-0">Om Masala</h4>
+            <h4 className="mt-auto p-0 m-0 font-weight-bold">Om Masala</h4>
         </NavLink>
     </MDBNavbarBrand>
 }

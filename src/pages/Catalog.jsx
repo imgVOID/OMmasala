@@ -167,12 +167,12 @@ const aromaHolders = [
         description: "Лыжа из древесины манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/32/700x700l80mc0/20151366879052.webp",
-        price: "50"
+        price: "100"
     },
     {
         id: "102",
         name: "Звезда",
-        description: "Лыжла из палисандра (розовое дерево)",
+        description: "Лыжа из палисандра (розовое дерево)",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/15/600x600l80mc0/85548171893188.webp",
         price: "50"
@@ -191,7 +191,7 @@ const aromaHolders = [
         description: "Тарелка из алюминия",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/12/700x700l80mc0/14551801769655.webp",
-        price: "50"
+        price: "200"
     },
 ]
 

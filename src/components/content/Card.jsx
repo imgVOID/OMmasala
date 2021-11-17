@@ -19,16 +19,16 @@ const Card = props => {
                         <div className='mask' style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}/>
                     </a>
                 </MDBRipple>
-                <MDBCardBody className="text-center">
+                <MDBCardBody className="text-center pb-4">
                     <MDBCardTitle className="text-uppercase m-0 p-0 pb-1 pt-2">
                         {props.category}
                         <b> {props.name}</b>
                     </MDBCardTitle>
-                    <MDBCardText className="cardDescription text-lowercase px-2 mb-3">
-                        <h4 className="d-none d-md-block d-lg-block m-0 p-0 pb-1">{props.description}</h4>
+                    <MDBCardText className="cardDescription text-lowercase px-2">
+                        <h4 className="d-none d-md-block d-lg-block m-0 p-0 pb-2">{props.description}</h4>
                         <h2 className="d-md-none d-lg-none m-0 p-0 pb-2">{props.description}</h2>
                     </MDBCardText>
-                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-3`}>
+                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-4`}>
                         <MDBBtn href='#' color="warning" size="sm" style={{"font-family":"'Arial', serif"}}
                                 className="shadow text-lowercase">
                             10

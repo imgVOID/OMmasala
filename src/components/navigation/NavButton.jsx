@@ -4,11 +4,10 @@ import {NavLink} from "react-router-dom";
 
 const NavButton = props => {
     if (props.dNone !== true) {
-        return <MDBNavbarItem className="text-center px-2">
-            <NavLink to={props.link} className="text-warning d-inline-block w-100 h-100"
+        return <MDBNavbarItem className="text-center">
+            <NavLink to={props.link} className="text-warning d-inline-block w-100 h-100 pt-1"
                      onClick={props.onClick}>
-                <MDBBtn className="navLink py-lg-0 shadow-0 font-weight-bold w-100 h-100 border-0"
-                        outline >
+                <MDBBtn className="navLink py-4 py-lg-0 shadow-0 font-weight-bold w-100 h-100 border-0" outline >
                     {props.text}
                 </MDBBtn>
             </NavLink>
