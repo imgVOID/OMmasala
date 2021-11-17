@@ -3,6 +3,7 @@ import {
     MDBNavbar,
     MDBContainer,
     MDBNavbarNav,
+    MDBBadge
 } from 'mdb-react-ui-kit';
 import NavButton from "./NavButton";
 import NavBrand from "./NavBrand";
@@ -25,11 +26,12 @@ const Navigation = props => {
 
     return (
         <>
-            <MDBNavbar fixed='top' light bgColor='dark navbar-expand-lg my-0 py-0 p-1'>
+            <MDBNavbar fixed='top' bgColor="dark" light className='navbar-expand-lg my-0 py-0 p-5' id="navbar">
                 <MDBContainer className="my-0 py-0">
                     <NavBrand onClick={closeNav}/>
                     <NavToggler handleNavCollapse={handleNavCollapse} isNavCollapsed={isNavCollapsed}/>
-                    <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse shadow-lg`} id="navbar">
+                    <div id="navbarCollapse"
+                         className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
                         <MDBNavbarNav right fullWidth={false} className='navContent pb-3 pb-lg-0 mt-4 mt-lg-0'>
                             <NavButton text="Каталог" link="/catalog/all" onClick={closeNav}
                                        dNone={props.path[1] === "catalog"}/>
@@ -40,6 +42,16 @@ const Navigation = props => {
                         </MDBNavbarNav>
                         <div className="d-lg-none d-block closeMenuArea" onClick={handleNavCollapse}/>
                     </div>
+                </MDBContainer>
+            </MDBNavbar>
+            <MDBNavbar fixed='top' light id={"navbarSecond"}
+                       className={`${props.path[1] !== 'catalog' ? "d-none" : ""} navbar-expand m-0 shadow-0`}>
+                <MDBContainer
+                    className="justify-content-end">
+                    <MDBBadge pill color="dark" id="navbarSecondText" className="text-warning px-4">
+                        <h3 className="p-0 m-0">50 гривен за 10 штук</h3>
+                    </MDBBadge>
+
                 </MDBContainer>
             </MDBNavbar>
         </>

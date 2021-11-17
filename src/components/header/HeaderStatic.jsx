@@ -12,7 +12,7 @@ const HeaderStatic = props => {
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
             <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-4'>
                 <div className='container text-white px-3'>
-                    <h1 className='titleHeader m-0 p-0 mt-1 mt-lg-0 mt-md-0'>
+                    <h1 className='titleHeader m-0 p-0 mt-2 mt-lg-0 mt-md-0'>
                         Om MASALA
                     </h1>
                     <HeaderDescription type={props.path[2]}/>

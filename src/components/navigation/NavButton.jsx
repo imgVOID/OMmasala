@@ -7,8 +7,8 @@ const NavButton = props => {
         return <MDBNavbarItem className="text-center px-2">
             <NavLink to={props.link} className="text-warning d-inline-block w-100 h-100"
                      onClick={props.onClick}>
-                <MDBBtn className="navLink text-warning py-4 py-lg-0 shadow-0 font-weight-bold w-100 h-100"
-                        outline color="dark">
+                <MDBBtn className="navLink py-lg-0 shadow-0 font-weight-bold w-100 h-100 border-0"
+                        outline >
                     {props.text}
                 </MDBBtn>
             </NavLink>
