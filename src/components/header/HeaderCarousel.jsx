@@ -11,7 +11,7 @@ import HeaderButton from "./HeaderButton";
 const CarouselCaption = props => {
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
         <div style={{"height": "30%"}} className="d-md-none d-lg-block"/>
-        <h1 className={'titleHeader mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-4'}>
+        <h1 className={'titleHeader mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-2'}>
             Om MASALA
         </h1>
         <h2 className={'headerDescription text-warning px-5 mx-4 align-bottom'}>
