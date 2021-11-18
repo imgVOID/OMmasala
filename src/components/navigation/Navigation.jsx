@@ -32,7 +32,7 @@ const Navigation = props => {
                     <div className={`${props.path[1] !== "catalog" ? "d-none" : ""} w-100 d-md-none d-lg-none`}/>
                     <MDBBadge id="navbarSecondText"
                               className={`${props.path[1] !== "catalog" ? "d-none" : ""} mt-0 mb-1 my-md-0 my-lg-0`}>
-                        <h4 className="p-lg-0 m-0">10 аромапалочек за 50 гривен</h4>
+                        <h4 className="p-lg-0 m-0">10 аромапалочек за 80 гривен</h4>
                     </MDBBadge>
                     <NavToggler handleNavCollapse={handleNavCollapse}
                                 isNavCollapsed={isNavCollapsed} path={props.path}/>

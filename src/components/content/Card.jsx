@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     MDBCard,
     MDBCardTitle,
@@ -7,28 +7,37 @@ import {
     MDBCardImage,
     MDBRipple,
     MDBBtn,
-    MDBBtnGroup
+    MDBBtnGroup,
+    MDBCarousel,
+    MDBCarouselInner,
+    MDBCarouselItem, MDBCarouselElement,MDBCarouselCaption
 } from 'mdb-react-ui-kit';
+import CardModal from "./CardModal";
+
 
 const Card = props => {
+    const [basicModal, setBasicModal] = useState(false);
+
+    const toggleShow = () => setBasicModal(!basicModal);
+
         return (
             <MDBCard className="m-3">
-                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' onClick={toggleShow}>
                     <MDBCardImage src={props.image} fluid alt='...' position='top' />
                     <a>
                         <div className='mask' style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}/>
                     </a>
                 </MDBRipple>
-                <MDBCardBody className="text-center pb-4">
-                    <MDBCardTitle className="text-uppercase m-0 p-0 pb-1 pt-2">
+                <MDBCardBody className="text-center">
+                    <MDBCardTitle className="text-uppercase m-0 p-0">
                         {props.category}
                         <b> {props.name}</b>
                     </MDBCardTitle>
                     <MDBCardText className="cardDescription text-lowercase px-2">
-                        <h4 className="d-none d-md-block d-lg-block m-0 p-0 pb-2">{props.description}</h4>
-                        <h2 className="d-md-none d-lg-none m-0 p-0 pb-2">{props.description}</h2>
+                        <h4 className="d-none d-md-block d-lg-block">{props.description}</h4>
+                        <h2 className="d-md-none d-lg-none">{props.description}</h2>
                     </MDBCardText>
-                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-4`}>
+                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-2`}>
                         <MDBBtn href='#' color="warning" size="sm" style={{"font-family":"'Arial', serif"}}
                                 className="shadow text-lowercase">
                             10
@@ -39,6 +48,9 @@ const Card = props => {
                         </MDBBtn>
                     </MDBBtnGroup>
                 </MDBCardBody>
+                <CardModal basicModal={basicModal} setBasicModal={setBasicModal} toggleShow={toggleShow}
+                           name={props.name} category={props.category} price={props.price}
+                           image={props.image} links={props.links} vendors={props.vendors}/>
             </MDBCard>
         );
 }

@@ -32,7 +32,6 @@ code {
   z-index: 0
 }
 
-
 .navLink {
   font-family: 'Arial Black', serif !important;
   z-index: 1;
@@ -92,6 +91,19 @@ code {
 .headerImage {
   background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
   height: 500px;
+}
+
+.accordion-button {
+  text-transform: uppercase;
+}
+
+.modalItemTitle {
+  font-family: 'Yuji Mai', cursive;
+}
+
+.fontCursive {
+  font-family: 'Caveat', cursive;
+
 }
 
 @media screen and (min-width: 900px) {

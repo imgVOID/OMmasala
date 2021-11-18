@@ -2,27 +2,64 @@ import React from "react";
 import MasonryGrid from "../components/content/MasonryGrid";
 import { Switch, Route } from 'react-router-dom';
 
+const vendors = {
+    olx: {
+        delivery: "OLX Доставка, УкрПочта, Justin",
+        min_amount: "300"
+    },
+    bigl: {
+        delivery: "Новая Почта, УкрПочта, Justin",
+        min_amount: "80"
+    },
+    crafta: {
+        delivery: "УкрПочта",
+        min_amount: "80"
+    },
+    izi: {
+        delivery: "Новая Почта, УкрПочта, Justin",
+        min_amount: "300"
+    }
+}
+
 const aromaSticks = [
     {
         id: "1",
-        name: "Saffron",
+        name: "Coconut",
         category: "Nature",
-        image: "https://apricot.com.ua/content/images/43/700x700l80mc0/81000864133007.webp",
-        price: "50"
+        image: "https://apricot.com.ua/content/images/28/700x700l80mc0/34607457799917.webp",
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com"
+        }
     },
     {
         id: "2",
         name: "Sandalwood",
         category: "Nature",
         image: "https://apricot.com.ua/content/images/46/700x700l80mc0/54691989759895.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "3",
         name: "Lavender",
         category: "Nature",
         image: "https://apricot.com.ua/content/images/35/700x700l80mc0/31262777313237.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "4",
@@ -30,21 +67,39 @@ const aromaSticks = [
         category: "Nature",
         description: "листья и масло эвкалипта",
         image: "https://apricot.com.ua/content/images/30/700x700l80mc0/73653555037934.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "5",
         name: "Mango",
         category: "Nature",
         image: "https://apricot.com.ua/content/images/34/700x700l80mc0/86496755347827.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "6",
         name: "Rose",
         category: "Nature",
         image: "https://apricot.com.ua/content/images/22/700x700l80mc0/95093074469640.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "7",
@@ -52,71 +107,125 @@ const aromaSticks = [
         category: "Nature",
         description: "ладан, смола Босвелии",
         image: "https://apricot.com.ua/content/images/15/700x700l80mc0/98530947482506.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "8",
-        name: "Tulasi",
-        category: "Nature",
-        description: "базилик священный",
-        image: "https://apricot.com.ua/content/images/25/700x700l80mc0/28291738732553.webp",
-        price: "50"
-    },
-    {
-        id: "9",
         name: "Patchouli",
         category: "Nature",
         description: "листья пачули",
         image: "https://apricot.com.ua/content/images/31/700x700l80mc0/44777155693058.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
-        id: "10",
+        id: "9",
         name: "Poppy",
         category: "Nature",
         description: "Семена мака",
         image: "https://apricot.com.ua/content/images/19/700x700l80mc0/39051933581851.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
-        id: "11",
+        id: "10",
         name: "Vanilla",
         category: "Nature",
         description: "Цветы и плоды ванили",
         image: "https://apricot.com.ua/content/images/33/700x700l80mc0/27632893563151.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
+    },
+    {
+        id: "11",
+        name: "Makalu",
+        category: "Tibetan",
+        description: "Лавр, полынь и камфора",
+        image: "https://apricot.com.ua/content/images/32/700x700l80mc0/89481905222696.webp",
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "12",
-        name: "Ylang-Ylang",
-        category: "Nature",
-        description: "Цветы иланг-иланга",
-        image: "https://apricot.com.ua/content/images/28/700x700l80mc0/35818315700923.webp",
-        price: "50"
-    },
-    {
-        id: "13",
         name: "Annapurna",
         category: "Tibetan",
         description: "Высокогорные цветы",
         image: "https://apricot.com.ua/content/images/16/700x700l80mc0/87023279654166.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
-        id: "14",
+        id: "13",
         name: "Chomolungma",
         category: "Tibetan",
         description: "Бетель, рододендрон и нард",
         image: "https://apricot.com.ua/content/images/27/700x700l80mc0/76272290378608.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
-        id: "15",
+        id: "14",
         name: "Kutang",
         category: "Tibetan",
         description: "Мак, миндаль и можжевельник",
         image: "https://apricot.com.ua/content/images/26/700x700l80mc0/43856343562866.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
+    },
+    {
+        id: "15",
+        name: "Game",
+        category: "Krishna",
+        description: "Цитронелла и цветы Рудракши",
+        image: "https://apricot.com.ua/content/images/30/700x700l80mc0/93443773396800.webp",
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "16",
@@ -124,15 +233,27 @@ const aromaSticks = [
         category: "Krishna",
         description: "Лотос, туласи, сандал и жасмин",
         image: "https://apricot.com.ua/content/images/20/700x700l80mc0/61831897678901.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+        crafta: "https://example.com",
+        bigl: "https://example.com",
+        izi: "https://example.com",
+}
     },
     {
         id: "17",
         name: "Dance",
         category: "Krishna",
-        description: "Лавр, полынь и камфора",
-        image: "https://apricot.com.ua/content/images/32/700x700l80mc0/89481905222696.webp",
-        price: "50"
+        description: "Шафран и сандал",
+        image: "https://apricot.com.ua/content/images/43/700x700l80mc0/81000864133007.webp",
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "18",
@@ -140,7 +261,13 @@ const aromaSticks = [
         category: "Mandir",
         description: "Фиалка, иланг-иланг и мелисса",
         image: "https://apricot.com.ua/content/images/17/700x700l80mc0/94063575775769.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "19",
@@ -148,7 +275,13 @@ const aromaSticks = [
         category: "Mandir",
         description: "Cандал и цветы рудракши, чампаки, гладиолуса, гибискуса",
         image: "https://apricot.com.ua/content/images/29/700x700l80mc0/67252951822507.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
     {
         id: "20",
@@ -156,7 +289,13 @@ const aromaSticks = [
         category: "Mandir",
         description: "Ландыш, сирень и корица",
         image: "https://apricot.com.ua/content/images/21/700x700l80mc0/38398832834928.webp",
-        price: "50"
+        price: "80",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com",
+        }
     },
 ];
 
@@ -198,24 +337,28 @@ const aromaHolders = [
 function Catalog() {
     return (
         <Switch>
-            <Route exact path='/catalog/all' component={Catalog}>
-                <MasonryGrid cards={aromaSticks.sort(() => Math.random() - 0.5)}/>
+            <Route exact path='/catalog/all' component={Catalog} >
+                <MasonryGrid cards={aromaSticks.sort(() => Math.random() - 0.5)}
+                             vendors={vendors}/>
             </Route>
             <Route exact path='/catalog/nature' component={Catalog}>
-                <MasonryGrid category={'Nature'}
+                <MasonryGrid vendors={vendors}
                     cards={aromaSticks.filter(card => card.category.includes('Nature'))}/>
             </Route>
             <Route exact path='/catalog/mandir' component={Catalog}>
-                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Mandir'))}/>
+                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Mandir'))}
+                             vendors={vendors}/>
             </Route>
             <Route exact path='/catalog/tibetan' component={Catalog}>
-                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Tibetan'))}/>
+                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Tibetan'))}
+                             vendors={vendors}/>
             </Route>
             <Route exact path='/catalog/krishna' component={Catalog}>
-                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Krishna'))}/>
+                <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Krishna'))}
+                             vendors={vendors}/>
             </Route>
             <Route exact path='/catalog/holders' component={Catalog}>
-                <MasonryGrid cards={aromaHolders}/>
+                <MasonryGrid cards={aromaHolders} vendors={vendors}/>
             </Route>
         </Switch>
 
