@@ -13,11 +13,11 @@ const CardModal = props => {
     return (
         <MDBModal show={props.basicModal} getOpenState={(e) => props.setBasicModal(e)} tabIndex='-1'>
             <MDBModalDialog>
-                <MDBModalContent className="bg-dark px-2">
+                <MDBModalContent className="bg-dark mt-lg-5 py-lg-1">
                     <MDBModalHeader className="justify-content-center border-0">
                         <MDBModalTitle className="text-center">
-                            <h2 className="modalItemTitle text-uppercase font-weight-bold
-                            d-block m-0 pt-4 pb-0 px-3 text-warning font-weight-normal">
+                            <h2 className="modalItemTitle text-uppercase
+                            d-block m-0 pt-4 pb-lg-1 px-3 text-warning font-weight-normal">
                                 {props.card.category + " " +  props.card.name}
                             </h2>
                         </MDBModalTitle>
@@ -26,7 +26,7 @@ const CardModal = props => {
                     <CardModalBody vendors={props.vendors} card={props.card}/>
 
                     <MDBModalFooter className="text-center justify-content-center
-                     text-warning bg-dark border-0 mb-3 pt-2">
+                     text-warning bg-dark border-0 mb-3 pt-2 pt-lg-3 mb-lg-4">
                         <h3 className={props.path[2] === "holders" ? "d-none" : "fontCursive"}>
                             10 аромапалочек "Om Masala" за {props.card.price}₴
                         </h3>

@@ -19,7 +19,7 @@ const CardModalBody = props => {
 
     return (
         <MDBModalBody className="bg-dark">
-            <MDBAccordion initialActive={props.card.name}>
+            <MDBAccordion>
                 {Object.entries(props.vendors).map((link) => {
                     return <MDBAccordionItem collapseId={link[0]} headerTitle={<HeaderTitle link={link}/>}
                                              className="text-uppercase justify-content-center">
