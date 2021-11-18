@@ -4,11 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 
 const vendors = {
     olx: {
-        delivery: "OLX Доставка, Укр Почта, Justin",
+        delivery: "OLX Доставка, УкрПочта, Justin",
         min_amount: "300"
     },
     bigl: {
-        delivery: "Новая Почта, Укр Почта, Justin",
+        delivery: "Новая Почта, УкрПочта, Justin",
         min_amount: "80"
     },
     crafta: {
@@ -16,7 +16,7 @@ const vendors = {
         min_amount: "80"
     },
     izi: {
-        delivery: "Новая Почта, Укр Почта, Justin",
+        delivery: "Новая Почта, УкрПочта, Justin",
         min_amount: "300"
     }
 }

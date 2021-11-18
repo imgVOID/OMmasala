@@ -21,7 +21,7 @@ const Card = props => {
             <MDBCard className="m-3">
                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' onClick={toggleShow}>
                     <MDBCardImage src={props.card.image} fluid alt='...' position='top' />
-                    <a>
+                    <a className="cardLink p-0 m-0">
                         <div className='mask' style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}/>
                     </a>
                 </MDBRipple>

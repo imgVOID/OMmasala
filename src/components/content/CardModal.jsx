@@ -25,14 +25,14 @@ const CardModal = props => {
 
                     <CardModalBody vendors={props.vendors} card={props.card}/>
 
-                    <MDBModalFooter className="fontCursive text-center justify-content-center
+                    <MDBModalFooter className="text-center justify-content-center
                      text-warning bg-dark px-2 border-0 mb-3 pt-2">
-                        <h3 className={props.path[2] === "holders" ? "d-none" : ""}>
+                        <h3 className={props.path[2] === "holders" ? "d-none" : "fontCursive"}>
                             Пыльцовые аромапалочки "Om Masala"
                             <br/>
                             10 за {props.card.price} гривен
                         </h3>
-                        <h3 className={props.path[2] !== "holders" ? "d-none" : ""}>
+                        <h3 className={props.path[2] !== "holders" ? "d-none" : "fontCursive"}>
                             Подставка для благовоний за {props.card.price} грн
                         </h3>
                     </MDBModalFooter>
