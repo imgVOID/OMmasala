@@ -4,52 +4,37 @@ import {
     MDBModalDialog,
     MDBModalContent,
     MDBModalHeader,
-    MDBModalBody,
     MDBModalFooter,
     MDBModalTitle,
-    MDBAccordion,
-    MDBAccordionItem, MDBTable, MDBTableHead, MDBTableBody
 } from 'mdb-react-ui-kit';
+import CardModalBody from "./CardModalBody";
 
 const CardModal = props => {
     return (
-        <MDBModal show={props.basicModal} getOpenState={(e) => props.setBasicModal(e)} tabIndex='-1' className="pt-5">
+        <MDBModal show={props.basicModal} getOpenState={(e) => props.setBasicModal(e)} tabIndex='-1'>
             <MDBModalDialog>
-                <MDBModalContent>
-                    <MDBModalHeader className="justify-content-center">
+                <MDBModalContent className="bg-dark px-2">
+                    <MDBModalHeader className="justify-content-center border-0">
                         <MDBModalTitle className="text-center">
-                            <span className="modalItemTitle text-uppercase font-weight-bold d-block">
-                                {props.category + " " +  props.name}
-                            </span>
+                            <h3 className="modalItemTitle text-uppercase font-weight-bold
+                            d-block m-0 pt-4 pb-0 px-3 text-warning">
+                                {props.card.category + " " +  props.card.name}
+                            </h3>
                         </MDBModalTitle>
                     </MDBModalHeader>
-                    <MDBModalBody>
-                        <MDBAccordion initialActive='accordionCollapse1'>
-                            {Object.entries(props.vendors).map((link, count) => {
-                                return <MDBAccordionItem collapseId={link[0]} headerTitle={link[0]}
-                                                         className="text-uppercase">
-                                    <MDBTable>
-                                        <MDBTableHead>
-                                            <tr>
-                                                <th className="text-capitalize text-center">Доставка</th>
-                                                <th className="text-capitalize text-center">Мин. заказ</th>
-                                            </tr>
-                                        </MDBTableHead>
-                                        <MDBTableBody>
-                                            <td className="text-capitalize text-center pt-2">
-                                                {link[1]["delivery"]}
-                                            </td>
-                                            <td className="text-capitalize text-center pt-2">
-                                                {link[1]["min_amount"]} грн
-                                            </td>
-                                        </MDBTableBody>
-                                    </MDBTable>
-                                </MDBAccordionItem>
-                            })}
-                        </MDBAccordion>
-                    </MDBModalBody>
-                    <MDBModalFooter className="fontCursive text-center justify-content-center">
-                        <h2>10 пыльцовых аромапалочек за {props.price} грн</h2>
+
+                    <CardModalBody vendors={props.vendors} card={props.card}/>
+
+                    <MDBModalFooter className="fontCursive text-center justify-content-center
+                     text-warning bg-dark px-2 border-0 mb-3 pt-2">
+                        <h3 className={props.path[2] === "holders" ? "d-none" : ""}>
+                            Пыльцовые аромапалочки "Om Masala"
+                            <br/>
+                            10 за {props.card.price} гривен
+                        </h3>
+                        <h3 className={props.path[2] !== "holders" ? "d-none" : ""}>
+                            Подставка для благовоний за {props.card.price} грн
+                        </h3>
                     </MDBModalFooter>
 
                 </MDBModalContent>

@@ -4,11 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 
 const vendors = {
     olx: {
-        delivery: "OLX Доставка, УкрПочта, Justin",
+        delivery: "OLX Доставка, Укр Почта, Justin",
         min_amount: "300"
     },
     bigl: {
-        delivery: "Новая Почта, УкрПочта, Justin",
+        delivery: "Новая Почта, Укр Почта, Justin",
         min_amount: "80"
     },
     crafta: {
@@ -16,7 +16,7 @@ const vendors = {
         min_amount: "80"
     },
     izi: {
-        delivery: "Новая Почта, УкрПочта, Justin",
+        delivery: "Новая Почта, Укр Почта, Justin",
         min_amount: "300"
     }
 }
@@ -306,7 +306,13 @@ const aromaHolders = [
         description: "Лыжа из древесины манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/32/700x700l80mc0/20151366879052.webp",
-        price: "100"
+        price: "100",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com"
+        }
     },
     {
         id: "102",
@@ -314,7 +320,13 @@ const aromaHolders = [
         description: "Лыжа из палисандра (розовое дерево)",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/15/600x600l80mc0/85548171893188.webp",
-        price: "50"
+        price: "50",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com"
+        }
     },
     {
         id: "103",
@@ -322,7 +334,13 @@ const aromaHolders = [
         description: "Лыжа из древесины манго",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/14/700x700l80mc0/86736614453737.webp",
-        price: "50"
+        price: "50",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com"
+        }
     },
     {
         id: "104",
@@ -330,35 +348,41 @@ const aromaHolders = [
         description: "Тарелка из алюминия",
         category: "Подставка",
         image: "https://apricot.com.ua/content/images/12/700x700l80mc0/14551801769655.webp",
-        price: "200"
+        price: "200",
+        links: {
+            olx: "https://example.com",
+            crafta: "https://example.com",
+            bigl: "https://example.com",
+            izi: "https://example.com"
+        }
     },
 ]
 
-function Catalog() {
+const Catalog = props => {
     return (
         <Switch>
             <Route exact path='/catalog/all' component={Catalog} >
                 <MasonryGrid cards={aromaSticks.sort(() => Math.random() - 0.5)}
-                             vendors={vendors}/>
+                             vendors={vendors} path={props.path}/>
             </Route>
             <Route exact path='/catalog/nature' component={Catalog}>
-                <MasonryGrid vendors={vendors}
+                <MasonryGrid vendors={vendors} path={props.path}
                     cards={aromaSticks.filter(card => card.category.includes('Nature'))}/>
             </Route>
             <Route exact path='/catalog/mandir' component={Catalog}>
                 <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Mandir'))}
-                             vendors={vendors}/>
+                             vendors={vendors} path={props.path}/>
             </Route>
             <Route exact path='/catalog/tibetan' component={Catalog}>
                 <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Tibetan'))}
-                             vendors={vendors}/>
+                             vendors={vendors} path={props.path}/>
             </Route>
             <Route exact path='/catalog/krishna' component={Catalog}>
                 <MasonryGrid cards={aromaSticks.filter(card => card.category.includes('Krishna'))}
-                             vendors={vendors}/>
+                             vendors={vendors} path={props.path}/>
             </Route>
             <Route exact path='/catalog/holders' component={Catalog}>
-                <MasonryGrid cards={aromaHolders} vendors={vendors}/>
+                <MasonryGrid cards={aromaHolders} vendors={vendors} path={props.path}/>
             </Route>
         </Switch>
 

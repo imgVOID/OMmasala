@@ -1,7 +1,7 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
 import Header from "./components/header/Header"
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, useLocation} from 'react-router-dom';
 import Test from './components/Test';
 import Catalog from "./pages/Catalog";
 
@@ -15,15 +15,21 @@ function Meta() {
 }
 
 function App() {
+    const location = useLocation();
+    //destructuring pathname from location
+    const {pathname} = location;
+    //Javascript split method to get the name of the path in array
+    const splitLocation = pathname.split("/");
+
     return (
         <div className="App">
             <Meta/>
             <section className="Header">
-                <Header/>
+                <Header path={splitLocation}/>
             </section>
             <Switch>
                 <Route path='/catalog' component={Catalog}>
-                    <Catalog/>
+                    <Catalog path={splitLocation}/>
                 </Route>
                 <Route exact path='/signup'>
                     <Test/>

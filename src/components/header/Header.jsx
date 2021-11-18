@@ -1,5 +1,4 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
 import {Switch, Route} from 'react-router-dom';
 import Navigation from "../navigation/Navigation";
 import HeaderCarousel from "./HeaderCarousel";
@@ -7,29 +6,23 @@ import HeaderStatic from "./HeaderStatic";
 import Catalog from "../../pages/Catalog";
 
 
-export default function Header() {
-    const location = useLocation();
-    //destructuring pathname from location
-    const {pathname} = location;
-    //Javascript split method to get the name of the path in array
-    const splitLocation = pathname.split("/");
-
-    return (
-        <header>
-            <Navigation path={splitLocation}/>
+const Header = props => {
+    return <header>
+            <Navigation path={props.path}/>
             <Switch>
                 <Route path='/catalog' component={Catalog}>
-                    <HeaderStatic path={splitLocation}/>
+                    <HeaderStatic path={props.path}/>
                 </Route>
                 <Route exact path='/'>
-                    <HeaderCarousel path={splitLocation} dNoneSmall={true}/>
-                    <HeaderStatic path={splitLocation} dNoneBig={true}/>
+                    <HeaderCarousel path={props.path} dNoneSmall={true}/>
+                    <HeaderStatic path={props.path} dNoneBig={true}/>
                 </Route>
                 <Route exact path='/signup'>
-                    <HeaderCarousel path={splitLocation} dNoneSmall={true}/>
-                    <HeaderStatic path={splitLocation} dNoneBig={true}/>
+                    <HeaderCarousel path={props.path} dNoneSmall={true}/>
+                    <HeaderStatic path={props.path} dNoneBig={true}/>
                 </Route>
             </Switch>
         </header>
-    );
 }
+
+export default Header

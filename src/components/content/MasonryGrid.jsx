@@ -11,9 +11,8 @@ const MasonryGrid = props => {
                 <Masonry>
                     {props.cards.map((card) => {
                         return (
-                            <Card key={card.id} className={card.category} price={card.price}
-                                  name={card.name} category={card.category} vendors={props.vendors}
-                                  image={card.image} description={card.description} links={card.links}/>
+                            <Card card={card} className={card.category} vendors={props.vendors}
+                                  path={props.path} links={card.links}/>
                         );
                     })}
                 </Masonry>

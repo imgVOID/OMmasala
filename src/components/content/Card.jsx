@@ -8,9 +8,6 @@ import {
     MDBRipple,
     MDBBtn,
     MDBBtnGroup,
-    MDBCarousel,
-    MDBCarouselInner,
-    MDBCarouselItem, MDBCarouselElement,MDBCarouselCaption
 } from 'mdb-react-ui-kit';
 import CardModal from "./CardModal";
 
@@ -23,34 +20,33 @@ const Card = props => {
         return (
             <MDBCard className="m-3">
                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' onClick={toggleShow}>
-                    <MDBCardImage src={props.image} fluid alt='...' position='top' />
+                    <MDBCardImage src={props.card.image} fluid alt='...' position='top' />
                     <a>
                         <div className='mask' style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}/>
                     </a>
                 </MDBRipple>
                 <MDBCardBody className="text-center">
                     <MDBCardTitle className="text-uppercase m-0 p-0">
-                        {props.category}
-                        <b> {props.name}</b>
+                        {props.card.category}
+                        <b> {props.card.name}</b>
                     </MDBCardTitle>
-                    <MDBCardText className="cardDescription text-lowercase px-2">
-                        <h4 className="d-none d-md-block d-lg-block">{props.description}</h4>
-                        <h2 className="d-md-none d-lg-none">{props.description}</h2>
+                    <MDBCardText className="cardDescription text-lowercase px-2 pt-1">
+                        <h4 className="d-none d-md-block d-lg-block">{props.card.description}</h4>
+                        <h2 className="d-md-none d-lg-none">{props.card.description}</h2>
                     </MDBCardText>
-                    <MDBBtnGroup shadow="0" className={`${props.category !== "Подставка" ? "d-none" : ""} mb-2`}>
+                    <MDBBtnGroup shadow="0" className={`${props.card.category !== "Подставка" ? "d-none" : ""} mb-2`}>
                         <MDBBtn href='#' color="warning" size="sm" style={{"font-family":"'Arial', serif"}}
                                 className="shadow text-lowercase">
                             10
                         </MDBBtn>
                         <MDBBtn href='#' size="sm" color="warning" outline className="font-weight-bold"
                                 style={{"color": "#4e4e4e", "font-family":"'Arial', serif"}}>
-                            {props.price} ₴
+                            {props.card.price} ₴
                         </MDBBtn>
                     </MDBBtnGroup>
                 </MDBCardBody>
                 <CardModal basicModal={basicModal} setBasicModal={setBasicModal} toggleShow={toggleShow}
-                           name={props.name} category={props.category} price={props.price}
-                           image={props.image} links={props.links} vendors={props.vendors}/>
+                           card={props.card} links={props.links} vendors={props.vendors} path={props.path}/>
             </MDBCard>
         );
 }
