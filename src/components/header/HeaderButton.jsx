@@ -9,7 +9,7 @@ const HeaderButton = props => {
     } else {
         color = props.path[2] === props.name ? "warning" : "light"
     }
-    if (props.header) {
+    if (props.landing) {
         color = "warning"
     }
 

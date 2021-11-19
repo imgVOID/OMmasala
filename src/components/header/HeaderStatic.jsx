@@ -3,7 +3,7 @@ import HeaderDescription from "./HeaderDescription";
 import HeaderButton from "./HeaderButton";
 
 const HeaderStatic = props => {
-    let header = props.path[1] !== 'catalog'
+    let landing = props.path[1] !== 'catalog'
     let display = ""
     if (props.dNoneBig) {
         display = "d-lg-none d-md-none"
@@ -20,11 +20,11 @@ const HeaderStatic = props => {
                         <HeaderButton name="" text="Аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="nature" text='Nature' path={props.path} bold={true} header={header}/>
-                        <HeaderButton name="mandir" text='Mandir' path={props.path} bold={true} header={header}/>
+                        <HeaderButton name="nature" text='Nature' path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton name="mandir" text='Mandir' path={props.path} bold={true} landing={landing}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="tibetan" text='Tibetan' path={props.path} bold={true} header={header}/>
-                        <HeaderButton name="krishna" text='Krishna' path={props.path} bold={true} header={header}/>
+                        <HeaderButton name="tibetan" text='Tibetan' path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton name="krishna" text='Krishna' path={props.path} bold={true} landing={landing}/>
                         <br className={`d-lg-none d-md-none`}/>
                         <HeaderButton name="holders" text="Подставки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
