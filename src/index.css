@@ -95,10 +95,16 @@ code {
 
 .accordion-button {
   text-transform: uppercase;
-  font-weight: 700;
   color: #fea810 !important;
   padding: 0;
   margin: 0;
+  display: flex;
+  width: 100% !important;
+  font-family: 'Yuji Mai', Arial, serif;
+}
+
+.accordion-header .collapsed h5 i:before {
+  content: "\f107" !important;
 }
 
 .accordion-header .collapsed {
@@ -122,7 +128,6 @@ code {
 .cardLink {
   cursor: pointer;
 }
-
 
 @media screen and (min-width: 900px) {
   .headerImage {
