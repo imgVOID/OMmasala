@@ -13,7 +13,6 @@ const HeaderButton = props => {
         color = "warning"
     }
 
-
     if (props.dNone !== true){
         return <Link to={`/catalog/${props.name}`} className={props.path[2] === props.name ? "disabled" : ""}>
             <MDBBtn outline color={color} size={props.size} style={props.style}
