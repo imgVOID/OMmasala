@@ -31,6 +31,9 @@ function App() {
                 <Route path='/catalog' component={Catalog}>
                     <Catalog path={splitLocation}/>
                 </Route>
+                <Route exact path='/'>
+                    <Test/>
+                </Route>
                 <Route exact path='/signup'>
                     <Test/>
                 </Route>
