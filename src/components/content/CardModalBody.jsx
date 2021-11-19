@@ -13,7 +13,7 @@ const CardModalBody = props => {
     const HeaderTitle = props => {
         return <h5 className="row w-100 m-0 p-0">
             <span className="col-11">{props.link[0]}</span>
-            <MDBIcon className="col-1 mx-0 p-0 pt-1" icon="angle-up" size="sm" fas/>
+            <MDBIcon icon="angle-up" size="sm" fas className="col-1 mx-0 px-0 pt-1 pe-lg-0 ps-lg-2 pe-md-0 ps-md-2"/>
         </h5>
     }
 
