@@ -6,24 +6,26 @@ import {MDBContainer} from "mdb-react-ui-kit";
 
 const MasonryGrid = props => {
     let products = []
-    let productsObject = props.products
-
-    if (props.exclude) {
-        delete productsObject[props.exclude]
-    }
 
     if (!props.category) {
-        Object.values(productsObject).map((cardList) => {
+        let allProductsView = {}
+
+        if (props.exclude) {
+            Object.assign(allProductsView, props.products);
+            delete allProductsView[props.exclude]
+        }
+
+        Object.values(allProductsView).map((cardList) => {
             Array.prototype.push.apply(products, cardList);
         })
     } else {
-        products = productsObject[props.category]
+        products = props.products[props.category]
     }
 
     products = products
-        .map((value) => ({ value, sort: Math.random() }))
+        .map((value) => ({value, sort: Math.random()}))
         .sort((a, b) => a.sort - b.sort)
-        .map(({ value }) => value)
+        .map(({value}) => value)
 
     return (
         <MDBContainer className="Grid mt-3">
