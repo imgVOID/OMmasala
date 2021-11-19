@@ -9,6 +9,7 @@ import {
 } from 'mdb-react-ui-kit';
 
 const CardModalBody = props => {
+
     const HeaderTitle = props => {
         return <h5 className="row w-100 m-0 p-0">
             <span className="col-11">{props.link[0]}</span>
