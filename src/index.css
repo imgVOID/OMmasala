@@ -2,149 +2,128 @@
 @import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
 
 body {
-  margin: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 
 #navbarSecondText {
-  font-family: 'Caveat', cursive;
-  font-weight: 400;
-  background-color: rgba(37,37,37,1) !important;
-  text-shadow: 1px 1px 1px rgba(37,37,37,1);
-  border-radius: 0 0 10px 10px !important;
-  color: #d1c8c2 !important;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    background-color: rgba(37, 37, 37, 1) !important;
+    text-shadow: 1px 1px 1px rgba(37, 37, 37, 1);
+    border-radius: 0 0 10px 10px !important;
+    color: #d1c8c2 !important;
 }
 
-.closeMenuArea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0
-}
 
 .navLink {
-  font-family: 'Arial Black', serif !important;
-  z-index: 1;
-  color: #d1c8c2 !important;
+    font-family: 'Arial Black', serif !important;
+    color: #d1c8c2 !important;
 }
 
-.navbar-toggler {
-  z-index: 1;
-}
-
-.navSocialLink {
-  z-index: 1;
-}
-
-.navImage {
-  z-index: 1;
-}
 
 .titleNav {
-  font-family: 'Yuji Mai', cursive;
-  font-weight: 800;
-  z-index: 2;
-  text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
-  0 8px 13px rgba(37,37,37,0.1),
-  0 18px 23px rgba(37,37,37,0.1);
+    font-family: 'Yuji Mai', cursive;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(37, 37, 37, 0.8),
+    0 8px 13px rgba(37, 37, 37, 0.1),
+    0 18px 23px rgba(37, 37, 37, 0.1);
 }
 
 
 .titleHeader {
-  font-family: 'Yuji Mai', cursive;
-  text-shadow: 0 1px 3px rgba(37,37,37,0.7),
-  0 8px 13px rgba(37,37,37,0.1),
-  0 18px 23px rgba(37,37,37,0.1);
+    font-family: 'Yuji Mai', cursive;
+    text-shadow: 0 1px 3px rgba(37, 37, 37, 0.7),
+    0 8px 13px rgba(37, 37, 37, 0.1),
+    0 18px 23px rgba(37, 37, 37, 0.1);
 }
 
 .navLink {
-  font-family: 'Arial', serif !important;
+    font-family: 'Arial', serif !important;
 }
 
 .headerDescription {
-  font-family: 'Caveat', serif;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(37,37,37,0.8),
-  0 8px 13px rgba(37,37,37,0.1),
-  0 18px 23px rgba(37,37,37,0.1);
+    font-family: 'Caveat', serif;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(37, 37, 37, 0.8),
+    0 8px 13px rgba(37, 37, 37, 0.1),
+    0 18px 23px rgba(37, 37, 37, 0.1);
 }
 
 .headerButton {
-  font-family: 'Arial', 'Caveat', serif;
+    font-family: 'Arial', 'Caveat', serif;
 
 }
 
 .cardDescription {
-  font-family: 'Caveat', cursive;
+    font-family: 'Caveat', cursive;
 }
 
 .headerImage {
-  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-  height: 500px;
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+    height: 500px;
 }
 
 .accordion-button {
-  text-transform: uppercase;
-  color: #fea810 !important;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100% !important;
-  font-family: 'Yuji Mai', Arial, serif;
+    text-transform: uppercase;
+    color: #fea810 !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100% !important;
+    font-family: 'Yuji Mai', Arial, serif;
 }
 
 .accordion-header .collapsed h5 i:before {
-  content: "\f107" !important;
+    content: "\f107" !important;
 }
 
 .accordion-header .collapsed {
-  font-style: normal;
-  text-decoration: none;
-  color: #4e4e4e !important
+    font-style: normal;
+    text-decoration: none;
+    color: #4e4e4e !important
 }
 
 .accordion-button::after {
-  display: none !important;
+    display: none !important;
 }
 
 .modalItemTitle {
-  font-family: 'Yuji Mai', 'Caveat', serif;
+    font-family: 'Yuji Mai', 'Caveat', serif;
 }
 
 .fontCursive {
-  font-family: 'Caveat', cursive;
+    font-family: 'Caveat', cursive;
 }
 
 .cardLink {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 900px) {
-  .headerImage {
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-    height: 330px;
-  }
+    .headerImage {
+        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+        height: 330px;
+    }
 
-  #navbarSecond {
-    top:0 !important;
-  }
+    #navbarSecond {
+        top: 0 !important;
+    }
 }
 
 
 @media screen and (min-width: 768px) {
-  .headerImage {
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-    height: 330px;
-  }
+    .headerImage {
+        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+        height: 330px;
+    }
 
 }
