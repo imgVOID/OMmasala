@@ -47,8 +47,8 @@ const Navigation = props => {
                 <MDBContainer className="my-0 py-1">
                     <NavBrand onClick={setIsNavCollapsed}/>
                     <div className={`${props.path[1] !== "catalog" ? "d-none" : ""} w-100 d-md-none d-lg-none`}/>
-                    <MDBBadge id="navbarSecondText"
-                              className={`${props.path[1] !== "catalog" ? "d-none" : ""} mt-0 mb-1 my-md-0 my-lg-0`}>
+                    <MDBBadge id="navbarSecondText" className={
+                        `${props.path[1] !== "catalog" ? "d-none" : ""} p-0 mt-0 mb-1 my-md-0 my-lg-0`}>
                         <h4 className="p-lg-0 m-0">10 аромапалочек за 80 гривен</h4>
                     </MDBBadge>
                     <NavToggler handleNavCollapse={toggleCollapse}
