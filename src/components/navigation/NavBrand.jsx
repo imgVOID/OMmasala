@@ -4,7 +4,7 @@ import React from "react";
 
 
 const NavBrand = props => {
-    return <MDBNavbarBrand className="p-2" href='#'>
+    return <MDBNavbarBrand href='#'>
         <img className="navImage pe-2" height='30' alt='' loading='lazy'
              src='https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.png' />
         <NavLink className="titleNav text-warning text-capitalize p-0 m-0" onClick={props.onClick} to="/">

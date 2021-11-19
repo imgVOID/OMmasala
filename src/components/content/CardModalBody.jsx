@@ -19,12 +19,12 @@ const CardModalBody = props => {
 
     return (
         <MDBModalBody className="bg-light">
-            <MDBAccordion flush className="bg-light">
+            <MDBAccordion flush>
                 {Object.entries(props.vendors).map((link) => {
                     return <MDBAccordionItem
                         collapseId={link[0]} headerTitle={<HeaderTitle link={link}/>}
                         className="text-uppercase justify-content-center font-weight-bold bg-light">
-                        <MDBContainer className="bg-light">
+                        <MDBContainer>
                             <a className="p-0 b-0" href={props.card.links[link[0]]} target="_blank">
                                 <MDBBtn block color="light" className="font-weight-bold mt-1" size="lg">
                                     Заказать на <span>{link[0]}</span>
