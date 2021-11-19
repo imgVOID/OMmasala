@@ -15,7 +15,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
 
 #navbarSecondText {
     font-family: 'Caveat', cursive;
