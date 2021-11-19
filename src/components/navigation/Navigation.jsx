@@ -56,7 +56,7 @@ const Navigation = props => {
                     <div id="navbarCollapse"
                          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
                         <MDBNavbarNav right fullWidth={false} className='navContent pb-3 pb-lg-0 mt-4 mt-lg-0'>
-                            <NavButton text="Каталог" link="/catalog/all" onClick={setIsNavCollapsed}
+                            <NavButton text="Каталог" link="/catalog" onClick={setIsNavCollapsed}
                                        dNone={props.path[1] === "catalog"}/>
                             <NavButton text="О Нас" link="/signup" onClick={setIsNavCollapsed}/>
                             <NavButton text="Новости" link="/signup" onClick={setIsNavCollapsed}/>

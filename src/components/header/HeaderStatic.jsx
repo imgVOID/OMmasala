@@ -17,7 +17,7 @@ const HeaderStatic = props => {
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
                     <div className='pb-5 pb-lg-0 pb-md-0 mt-1'>
-                        <HeaderButton name="all" text="Аромапалочки"
+                        <HeaderButton name="" text="Аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none d-md-none`}/>
                         <HeaderButton name="nature" text='Nature' path={props.path} bold={true} header={header}/>
