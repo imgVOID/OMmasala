@@ -60,7 +60,6 @@ code {
 
 .headerButton {
     font-family: 'Arial', 'Caveat', serif;
-
 }
 
 .cardDescription {
@@ -80,6 +79,7 @@ code {
     display: flex;
     width: 100% !important;
     font-family: 'Yuji Mai', Arial, serif;
+    background-color: #fafafa !important;
 }
 
 .accordion-header .collapsed h5 i:before {
