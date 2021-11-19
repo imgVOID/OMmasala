@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Yuji+Mai&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
 
+html {
+    overflow: hidden;
+}
 body {
     margin: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;

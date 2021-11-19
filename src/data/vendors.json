@@ -1,0 +1,18 @@
+{
+  "olx": {
+    "delivery": "OLX Доставка, УкрПочта, Justin",
+    "min_amount": "300"
+  },
+  "bigl": {
+    "delivery": "Новая Почта, УкрПочта, Justin",
+    "min_amount": "80"
+  },
+  "crafta": {
+    "delivery": "УкрПочта",
+    "min_amount": "80"
+  },
+  "izi": {
+    "delivery": "Новая Почта, УкрПочта, Justin",
+    "min_amount": "300"
+  }
+}

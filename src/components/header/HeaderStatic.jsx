@@ -26,7 +26,7 @@ const HeaderStatic = props => {
                         <HeaderButton name="tibetan" text='Tibetan' path={props.path} bold={true} header={header}/>
                         <HeaderButton name="krishna" text='Krishna' path={props.path} bold={true} header={header}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="holders" text="Подставочки"
+                        <HeaderButton name="holders" text="Подставки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                     </div>
                 </div>

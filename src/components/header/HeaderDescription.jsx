@@ -1,10 +1,6 @@
 import React from 'react';
 
 const description = {
-    "all" : {
-        "text": `индийские пыльцовые аромапалочки в Украине`,
-        "styles": "mx-3"
-    },
     "nature": {
         "text": "натуральные аромапалочки масала с единым ароматом",
         "styles": "mx-4"

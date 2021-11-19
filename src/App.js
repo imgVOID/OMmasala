@@ -1,9 +1,12 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
+import { Scrollbars } from 'react-custom-scrollbars';
 import Header from "./components/header/Header"
 import {Switch, Route, useLocation} from 'react-router-dom';
 import Test from './components/Test';
 import Catalog from "./pages/Catalog";
+import useWindowDimensions from "./components/useWindowDimensions";
+
 
 function Meta() {
     return <Helmet>
@@ -20,10 +23,12 @@ function App() {
     const {pathname} = location;
     //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
+    const { height } = useWindowDimensions();
 
     return (
         <div className="App">
             <Meta/>
+            <Scrollbars style={{ "height": height }}>
             <section className="Header">
                 <Header path={splitLocation}/>
             </section>
@@ -38,6 +43,7 @@ function App() {
                     <Test/>
                 </Route>
             </Switch>
+        </Scrollbars>
         </div>
     );
 }
