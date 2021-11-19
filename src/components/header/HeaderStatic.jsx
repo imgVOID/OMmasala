@@ -16,7 +16,7 @@ const HeaderStatic = props => {
                         OM MASALA
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
-                    <div className='pb-5 pb-lg-0 pb-md-0'>
+                    <div className='pb-5 pb-lg-0 pb-md-0 mt-lg-1'>
                         <HeaderButton name="" text="Аромапалочки"
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none d-md-none`}/>
