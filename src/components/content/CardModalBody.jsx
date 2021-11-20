@@ -5,7 +5,7 @@ import {
     MDBTable,
     MDBTableHead,
     MDBTableBody,
-    MDBBtn, MDBIcon, MDBContainer, MDBModalBody
+    MDBBtn, MDBIcon, MDBContainer, MDBModalBody, MDBTypography
 } from 'mdb-react-ui-kit';
 
 const CardModalBody = props => {
@@ -17,37 +17,50 @@ const CardModalBody = props => {
         </h5>
     }
 
+    const DeliveryTable = props => {
+        return props.vendor["delivery"].map((delivery, index) => {
+            return <tr className=" m-0 p-0">
+                <td className="text-center p-0 pt-1 pb-0 border-0">
+                    {delivery}
+                </td>
+                <td className="text-center p-0 pt-1 border-0">
+                    {props.vendor["min_amount"][index]}
+                </td>
+            </tr>
+        })
+    }
+
     return (
         <MDBModalBody className="bg-light">
             <MDBAccordion flush>
-                {Object.entries(props.vendors).map((link) => {
+                {Object.entries(props.vendors).map((vendor) => {
                     return <MDBAccordionItem
-                        collapseId={link[0]} headerTitle={<HeaderTitle link={link}/>}
-                        className="text-uppercase justify-content-center font-weight-bold bg-light">
-                        <MDBContainer>
-                            <a className="p-0 b-0" href={props.card.links[link[0]]} target="_blank">
+                        collapseId={vendor[0]} headerTitle={<HeaderTitle link={vendor}/>}
+                        className="justify-content-center bg-light text-center">
+                        <MDBContainer className="p-0 p-md-3 p-lg-3">
+                            <a className="p-0 b-0" href={props.card.links[vendor[0]]} target="_blank">
                                 <MDBBtn block color="light" className="font-weight-bold mt-1" size="lg">
-                                    Заказать на <span>{link[0]}</span>
+                                    Заказать на <span>{vendor[0]}</span>
                                 </MDBBtn>
                             </a>
-                            <MDBTable className="mb-0 pb-0 bg-light">
+                            <MDBTable className="mb-0 pb-0 bg-light mt-1">
                                 <MDBTableHead>
                                     <tr>
-                                        <th scope="col" className="text-capitalize text-center pb-1 pt-3">   </th>
-                                        <th scope="col" className="text-lowercase font-italic text-center pb-1 pt-3">
-                                            Мин.&nbsp;заказ
+                                        <th scope="col" className="font-italic text-center pb-1 pt-3">&nbsp;</th>
+                                        <th scope="col" className="font-italic text-center pb-1 pt-3">
+                                            мин.&nbsp;заказ
                                         </th>
                                     </tr>
                                 </MDBTableHead>
                                 <MDBTableBody>
-                                    <td className="text-capitalize text-center pt-1">
-                                        {link[1]["delivery"]}
-                                    </td>
-                                    <td className="text-lowercase text-center pt-1">
-                                        {link[1]["min_amount"]}&nbsp;₴
-                                    </td>
+                                    <DeliveryTable vendor={vendor[1]}/>
                                 </MDBTableBody>
                             </MDBTable>
+                            <MDBTypography tag='small' className={
+                                props.vendors[vendor[0]].gift ? "p-0 mt-3 mb-0 d-block font-italic" : "d-none"
+                            }>
+                                    {props.vendors[vendor[0]].gift}!
+                            </MDBTypography>
                         </MDBContainer>
                     </MDBAccordionItem>
                 })}
