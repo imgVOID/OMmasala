@@ -11,8 +11,6 @@ import NavToggler from "./NavToggler";
 import NavSocial from "./NavSocial";
 import useClickOutside from "../useClickOutside"
 
-
-
 const Navigation = props => {
 
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
