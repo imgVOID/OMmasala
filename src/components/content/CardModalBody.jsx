@@ -56,11 +56,14 @@ const CardModalBody = props => {
                                     <DeliveryTable vendor={vendor[1]}/>
                                 </MDBTableBody>
                             </MDBTable>
-                            <MDBTypography tag='small' className={
-                                props.vendors[vendor[0]].gift ? "p-0 mt-3 mb-0 d-block font-italic" : "d-none"
-                            }>
-                                    {props.vendors[vendor[0]].gift}!
-                            </MDBTypography>
+                            {
+                                props.vendors[vendor[0]]
+                                    ? <MDBTypography tag='small' className={
+                                        props.vendors[vendor[0]].gift ? "p-0 mt-3 mb-0 d-block font-italic" : "d-none"
+                                    }>
+                                        {props.vendors[vendor[0]].gift}!
+                                    </MDBTypography> : ""
+                            }
                         </MDBContainer>
                     </MDBAccordionItem>
                 })}
