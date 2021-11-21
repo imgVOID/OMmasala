@@ -7,17 +7,16 @@ const NavButton = props => {
 
     const handleClickHistory = path => {
         history.push(path)
+        props.toggleCollapse()
     }
 
-    if (props.dNone !== true) {
-        return <MDBNavbarItem className="text-center">
-                <MDBBtn className="navLink shadow-0 font-weight-bold w-100 h-100 border-0 py-4 py-lg-0" outline
-                        onClick={() => handleClickHistory(props.linkLocal)}>
-                    {props.text}
-                </MDBBtn>
+    return !props.dNone
+        ? <MDBNavbarItem className="text-center">
+            <MDBBtn className="navLink shadow-0 font-weight-bold w-100 h-100 border-0 py-4 py-lg-0" outline
+                    onClick={() => handleClickHistory(props.linkLocal)}>
+                {props.text}
+            </MDBBtn>
         </MDBNavbarItem>
-    } else {
-        return null
-    }
+        : null
 }
 export default NavButton;
