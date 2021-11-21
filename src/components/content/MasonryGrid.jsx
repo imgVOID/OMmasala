@@ -18,14 +18,15 @@ const MasonryGrid = props => {
         Object.values(allProductsView).map((cardList) => {
             Array.prototype.push.apply(products, cardList);
         })
+
+        products = products
+            .map((value) => ({value, sort: Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value)
+
     } else {
         products = props.products[props.category]
     }
-
-    products = products
-        .map((value) => ({value, sort: Math.random()}))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({value}) => value)
 
     return (
         <MDBContainer className="Grid mt-3">
