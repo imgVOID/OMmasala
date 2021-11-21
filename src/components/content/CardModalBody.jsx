@@ -21,9 +21,8 @@ const CardModalBody = props => {
         <MDBModalBody className="bg-light">
             <MDBAccordion flush>
                 {Object.keys(props.vendors).map((vendorTitle) => {
-                    return <MDBAccordionItem
-                        collapseId={vendorTitle} headerTitle={<HeaderTitle title={vendorTitle}/>}
-                        className="justify-content-center bg-light text-center">
+                    return <MDBAccordionItem className="justify-content-center bg-light text-center"
+                        collapseId={vendorTitle} headerTitle={<HeaderTitle title={vendorTitle}/>}>
                         <MDBContainer className="p-0 p-md-3 p-lg-3">
                             <a className="p-0 b-0" href={props.card.links[vendorTitle]} target="_blank">
                                 <MDBBtn block color="light" className="font-weight-bold mt-1" size="lg">
