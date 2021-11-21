@@ -17,19 +17,6 @@ const CardModalBody = props => {
         </h5>
     }
 
-    const DeliveryTable = props => {
-        return props.vendor["delivery"].map((delivery, index) => {
-            return <tr className=" m-0 p-0">
-                <td className="text-center p-0 pt-1 pb-0 border-0">
-                    {delivery}
-                </td>
-                <td className="text-center p-0 pt-1 border-0">
-                    {props.vendor["min_amount"][index]}
-                </td>
-            </tr>
-        })
-    }
-
     return (
         <MDBModalBody className="bg-light">
             <MDBAccordion flush>
@@ -53,14 +40,23 @@ const CardModalBody = props => {
                                     </tr>
                                 </MDBTableHead>
                                 <MDBTableBody>
-                                    <DeliveryTable vendor={vendor[1]}/>
+                                    {
+                                        vendor[1]["delivery"].map((delivery, index) => {
+                                            return <tr className=" m-0 p-0">
+                                                <td className="text-center p-0 pt-1 pb-0 border-0">
+                                                    {delivery}
+                                                </td>
+                                                <td className="text-center p-0 pt-1 border-0">
+                                                    {vendor[1]["min_amount"][index]}
+                                                </td>
+                                            </tr>
+                                        })
+                                    }
                                 </MDBTableBody>
                             </MDBTable>
                             {
-                                props.vendors[vendor[0]]
-                                    ? <MDBTypography tag='small' className={
-                                        props.vendors[vendor[0]].gift ? "p-0 mt-3 mb-0 d-block font-italic" : "d-none"
-                                    }>
+                                props.vendors[vendor[0]].gift
+                                    ? <MDBTypography tag='small' className="p-0 mt-3 mb-0 d-block font-italic">
                                         {props.vendors[vendor[0]].gift}!
                                     </MDBTypography> : ""
                             }
