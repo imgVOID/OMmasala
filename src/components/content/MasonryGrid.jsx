@@ -29,7 +29,7 @@ const MasonryGrid = props => {
 
     return (
         <MDBContainer className="Grid mt-3">
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1100: 4}}>
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}}>
                 <Masonry>
                     {products.map((product) => {
                         return (
