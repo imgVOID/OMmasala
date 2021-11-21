@@ -1,19 +1,19 @@
 {
   "olx": {
-    "delivery": ["Новая Почта, Justin", "OLX Доставка"],
-    "min_amount": ["предоплата 80 ₴", "160 ₴"],
-    "gift": ["", "Подарок с OLX Доставкой: подставка или аромапалочки Krishna Dance"]
+    "delivery": ["OLX Доставка", "Новая Почта, Justin"],
+    "min_amount": ["240 ₴", "предоплата"],
+    "gift": ["Подарок с OLX Доставкой: подставка или аромапалочки Krishna Dance", ""]
   },
   "bigl": {
     "delivery": ["Новая Почта, УкрПочта, Justin"],
     "min_amount": ["80 ₴"]
   },
   "crafta": {
-    "delivery": ["УкрПочта"],
+    "delivery": ["Новая Почта, УкрПочта, Justin"],
     "min_amount": ["80 ₴"]
   },
   "izi": {
     "delivery": ["Justin, Новая Почта"],
-    "min_amount": ["предоплата 160 ₴"]
+    "min_amount": ["предоплата"]
   }
 }

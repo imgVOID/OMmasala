@@ -2,7 +2,6 @@ import React from "react";
 import MasonryGrid from "../components/content/MasonryGrid";
 import {Switch, Route} from 'react-router-dom';
 import vendors from '../data/vendors.json'
-import categories from '../data/categories.json'
 import products from '../data/products.json'
 
 const Routes = props => {
@@ -19,7 +18,7 @@ const Catalog = props => {
             <Route exact path='/catalog/' component={Catalog}>
                 <MasonryGrid exclude={"holders"} products={products} vendors={vendors} path={props.path} />
             </Route>
-            <Routes categories={categories} path={props.path}/>
+            <Routes categories={Object.keys(products)} path={props.path}/>
         </Switch>
 
     );
