@@ -4,12 +4,23 @@ import React from "react";
 
 
 const NavBrand = props => {
-    return <MDBNavbarBrand href='#'>
-        <img className="navImage pe-2" height='30' alt='' loading='lazy'
-             src='https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.png' />
-        <NavLink className="titleNav text-warning text-capitalize p-0 m-0" onClick={props.onClick} to="/">
-            <h4 className="mt-auto p-0 m-0 font-weight-bold">Om Masala</h4>
-        </NavLink>
+    const title = "Om Masala"
+
+    const Image = () => {
+        return <img className="navImage pe-2" height='30' alt='' loading='lazy'
+                   src='https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.png'/>
+    }
+
+    return <MDBNavbarBrand>
+        {
+            props.path[1] ? <NavLink className="text-warning p-0 m-0" to="/"><Image/></NavLink> : <div><Image/></div>
+        }
+
+        <h4 className="titleNav mt-auto p-0 m-0 font-weight-bold text-warning text-capitalize">
+            {
+                props.path[1] ? <NavLink className="text-warning p-0 m-0" to="/">{ title }</NavLink> : title
+            }
+        </h4>
     </MDBNavbarBrand>
 }
 

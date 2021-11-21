@@ -14,10 +14,10 @@ const CarouselCaption = props => {
 
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
         <div style={{"height": "30%"}} className="d-none d-lg-block"/>
-        <h1 className={'titleHeader mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-2'}>
-            Om MASALA
+        <h1 className='titleHeader text-uppercase mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-2'>
+            Om Masala
         </h1>
-        <h2 className={'headerDescription text-warning px-5 mx-4 align-bottom'}>
+        <h2 className='headerDescription text-warning px-5 mx-4 align-bottom'>
             {props.text}
         </h2>
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>

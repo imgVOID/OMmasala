@@ -1,5 +1,5 @@
 import React from "react";
-import {useHistory} from "react-router-dom"
+import {useHistory, Link} from "react-router-dom";
 import HeaderDescription from "./HeaderDescription";
 import HeaderButton from "./HeaderButton";
 
@@ -13,8 +13,9 @@ const HeaderStatic = props => {
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
             <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-4'>
                 <div className='container text-white px-3'>
-                    <h1 className={`${props.path[1] === "catalog" ? "mt-4" : ""} titleHeader mb-0 p-0 mt-lg-0 mt-md-0`}>
-                        OM MASALA
+                    <h1 className={`${props.path[1] === "catalog" ? "mt-4" : ""} 
+                    text-uppercase titleHeader mb-0 p-0 mt-lg-0 mt-md-0`}>
+                        { props.path[1] ? <Link to="/" className="text-light p-0 m-0">Om Masala</Link> : "Om Masala" }
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
                     <div className='pb-5 pb-lg-0 pb-md-0 mt-lg-1'>
