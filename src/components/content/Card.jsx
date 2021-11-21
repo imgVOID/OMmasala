@@ -24,7 +24,7 @@ const Card = props => {
                 </a>
             </MDBRipple>
             <MDBCardBody className="text-center">
-                <MDBCardTitle className="text-uppercase m-0 p-0">
+                <MDBCardTitle className="text-uppercase m-0 p-0" onClick={toggleShow} style={{"cursor":"pointer"}}>
                     {props.card.category}
                     <b> {props.card.name}</b>
                 </MDBCardTitle>
