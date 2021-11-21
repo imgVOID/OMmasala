@@ -18,17 +18,21 @@ const HeaderStatic = props => {
                     </h1>
                     <HeaderDescription type={props.path[2]}/>
                     <div className='pb-5 pb-lg-0 pb-md-0 mt-lg-1'>
-                        <HeaderButton name="all" text="Аромапалочки" history={history}
+                        <HeaderButton linkLocal="" text="Аромапалочки" history={history}
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="nature" text='Nature' history={history} path={props.path} bold={true} landing={landing}/>
-                        <HeaderButton name="mandir" text='Mandir' history={history} path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton linkLocal="nature" text='Nature'
+                                      history={history} path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton linkLocal="mandir" text='Mandir'
+                                      history={history} path={props.path} bold={true} landing={landing}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="tibetan" text='Tibetan' history={history} path={props.path} bold={true} landing={landing}/>
-                        <HeaderButton name="krishna" text='Krishna' history={history} path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton linkLocal="tibetan" text='Tibetan'
+                                      history={history} path={props.path} bold={true} landing={landing}/>
+                        <HeaderButton linkLocal="krishna" text='Krishna'
+                                      history={history} path={props.path} bold={true} landing={landing}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton name="holders" text="Подставки" history={history}
-                                      dNone={props.path[1] !== 'catalog'} path={props.path}/>
+                        <HeaderButton linkLocal="holders" text="Подставки"
+                                      history={history} dNone={props.path[1] !== 'catalog'} path={props.path}/>
                     </div>
                 </div>
             </div>

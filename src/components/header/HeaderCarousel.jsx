@@ -1,4 +1,5 @@
 import React from 'react';
+import {useHistory} from "react-router-dom";
 import {
     MDBCarousel,
     MDBCarouselInner,
@@ -9,6 +10,8 @@ import {
 import HeaderButton from "./HeaderButton";
 
 const CarouselCaption = props => {
+    const history = useHistory();
+
     return <MDBCarouselCaption className="" style={{"height": "100%"}}>
         <div style={{"height": "30%"}} className="d-none d-lg-block"/>
         <h1 className={'titleHeader mb-0 d-lg-block d-md-block align-bottom mt-md-5 pt-md-2'}>
@@ -18,24 +21,21 @@ const CarouselCaption = props => {
             {props.text}
         </h2>
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
-            <HeaderButton name="nature" text='Nature' color="warning" path={props.path} size="lg"
-                          style={{"font-family":"'Yuji Mai', cursive"}}/>
-            <HeaderButton name="mandir" text='Mandir' color="warning" path={props.path} size="lg"
-                          style={{"font-family":"'Yuji Mai', cursive"}}/>
+            <HeaderButton linkLocal="nature" text='Nature' color="warning" size="lg" path={props.path}
+                          style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
+            <HeaderButton linkLocal="mandir" text='Mandir' color="warning" size="lg" path={props.path}
+                          style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
             <br className="d-lg-none"/>
-            <HeaderButton name="tibetan" text='Tibetan' color="warning" path={props.path} size="lg"
-                          style={{"font-family":"'Yuji Mai', cursive"}}/>
-            <HeaderButton name="krishna" text='Krishna' color="warning" path={props.path} size="lg"
-                          style={{"font-family":"'Yuji Mai', cursive"}}/>
+            <HeaderButton linkLocal="tibetan" text='Tibetan' color="warning" size="lg" path={props.path}
+                          style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
+            <HeaderButton linkLocal="krishna" text='Krishna' color="warning" size="lg" path={props.path}
+                          style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
         </div>
     </MDBCarouselCaption>
 }
 
 const HeaderCarousel = props => {
-    let display = ""
-    if (props.dNoneSmall) {
-        display =  "d-none d-md-block d-lg-block"
-    }
+    const display = props.dNoneSmall ? "d-none d-md-block d-lg-block" : ""
     if (props.dNoneSmall) {
         return <MDBCarousel className={"mt-4 d-none d-lg-block d-md-block" + display} fade showControls showIndicators interval={4600}>
             <MDBCarouselInner>

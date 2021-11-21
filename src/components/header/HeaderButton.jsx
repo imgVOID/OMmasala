@@ -2,20 +2,20 @@ import React from "react";
 import {MDBBtn} from "mdb-react-ui-kit";
 
 const HeaderButton = props => {
-    const disabled = props.path[2] === props.name ? "headerBtnDisabled" : ""
+    const className = `m-2 text-light text-uppercase ${props.bold ? "font-weight-bold" : ""} ${
+        !props.linkLocal[2] && !props.path[2] ? "headerBtnDisabled" :
+            props.path[2] === props.linkLocal ? "headerBtnDisabled" : ""
+    }`
 
     const handleClickHistory = path => {
-        props.history.replace(path)
+        props.history.push(path)
     }
 
-    if (props.dNone !== true){
-            return <MDBBtn outline size={props.size} style={props.style}
-                           onClick={() => handleClickHistory(props.name)} color={props.landing ? "warning" : "light"}
-                    className={`${props.bold ? "font-weight-bold" : ""} m-2 text-light text-uppercase ` + disabled}>
-                {props.text}
-            </MDBBtn>
-    } else {
-        return null
-    }
+    return !props.dNone
+        ? <MDBBtn outline size={props.size} style={props.style} className={className}
+                  onClick={() => handleClickHistory("/catalog/" + props.linkLocal)}
+                  color={props.landing ? "warning" : "light"}>{props.text}</MDBBtn>
+        : null
 }
+
 export default HeaderButton;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {
     MDBNavbar,
     MDBContainer,
@@ -9,32 +9,15 @@ import NavButton from "./NavButton";
 import NavBrand from "./NavBrand";
 import NavToggler from "./NavToggler";
 import NavSocial from "./NavSocial";
+import useClickOutside from "../useClickOutside"
 
-function useOutsideAlerter(ref, setIsNavCollapsed) {
-    useEffect(() => {
-        /**
-         * Toggle collapse if clicked on outside of element
-         */
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setIsNavCollapsed(true)
-            }
-        }
 
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            // Unbind the event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [ref]);
-}
 
 const Navigation = props => {
 
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef, setIsNavCollapsed);
+    useClickOutside(wrapperRef, setIsNavCollapsed);
 
     const toggleCollapse = () => {
         setIsNavCollapsed(!isNavCollapsed);
@@ -51,17 +34,16 @@ const Navigation = props => {
                         `${props.path[1] !== "catalog" ? "d-none" : ""} p-0 mt-0 mb-1 my-md-0 my-lg-0`}>
                         <h4 className="p-lg-0 m-0">10 аромапалочек за 80 гривен</h4>
                     </MDBBadge>
-                    <NavToggler handleNavCollapse={toggleCollapse}
-                                isNavCollapsed={isNavCollapsed} path={props.path}/>
+                    <NavToggler handleNavCollapse={toggleCollapse} isNavCollapsed={isNavCollapsed} path={props.path}/>
                     <div id="navbarCollapse"
                          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
                         <MDBNavbarNav right fullWidth={false} className='navContent pb-3 pb-lg-0 mt-4 mt-lg-0'>
-                            <NavButton text="Каталог" link="/catalog" onClick={setIsNavCollapsed}
+                            <NavButton text="Каталог" linkLocal="/catalog"
                                        dNone={props.path[1] === "catalog"}/>
-                            <NavButton text="О Нас" link="/signup" onClick={setIsNavCollapsed}/>
-                            <NavButton text="Новости" link="/signup" onClick={setIsNavCollapsed}/>
-                            <NavButton text="Доставка" link="/signup" onClick={setIsNavCollapsed}/>
-                            <NavSocial onClick={setIsNavCollapsed}/>
+                            <NavButton text="О Нас" linkLocal="/signup"/>
+                            <NavButton text="Новости" linkLocal="/signup"/>
+                            <NavButton text="Доставка" linkLocal="/signup"/>
+                            <NavSocial />
                         </MDBNavbarNav>
                     </div>
                 </MDBContainer>
