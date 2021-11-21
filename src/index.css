@@ -15,9 +15,11 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-a.disabled {
+
+.headerBtnDisabled {
     pointer-events: none;
     cursor: default;
+    border-color: #fea810 !important;
 }
 
 #navbarSecondText {

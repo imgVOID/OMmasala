@@ -15,7 +15,7 @@ const Routes = props => {
 const Catalog = props => {
     return (
         <Switch>
-            <Route exact path='/catalog/' component={Catalog}>
+            <Route exact path='/catalog/all' component={Catalog}>
                 <MasonryGrid exclude={"holders"} products={products} vendors={vendors} path={props.path} />
             </Route>
             <Routes categories={Object.keys(products)} path={props.path}/>

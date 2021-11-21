@@ -1,25 +1,18 @@
 import React from "react";
 import {MDBBtn} from "mdb-react-ui-kit";
-import {Link} from "react-router-dom";
 
 const HeaderButton = props => {
-    let color
-    if (props.color) {
-        color = props.color
-    } else {
-        color = props.path[2] === props.name ? "warning" : "light"
-    }
-    if (props.landing) {
-        color = "warning"
+    const active = props.path[2] === props.name ? "headerBtnDisabled" : ""
+    const handleClickHistory = path => {
+        props.history.replace(path)
     }
 
     if (props.dNone !== true){
-        return <Link to={`/catalog/${props.name}`} className={props.path[2] === props.name ? "disabled" : ""}>
-            <MDBBtn outline color={color} size={props.size} style={props.style}
-                    className={`${props.bold ? "font-weight-bold" : ""} m-2 text-light text-uppercase`}>
+            return <MDBBtn outline size={props.size} style={props.style} onClick={() => handleClickHistory(props.name)}
+                           color={props.landing ? "warning" : "light"}
+                    className={`${props.bold ? "font-weight-bold" : ""} m-2 text-light text-uppercase ` + active}>
                 {props.text}
             </MDBBtn>
-        </Link>
     } else {
         return null
     }
