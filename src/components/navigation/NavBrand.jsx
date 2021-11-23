@@ -7,7 +7,7 @@ const NavBrand = props => {
     const title = "Om Masala"
 
     const Image = () => {
-        return <img className="navImage pe-2" height='30' alt='' loading='lazy'
+        return <img className="navImage pe-2 p-0 m-0 pb-1" height='30' alt='' loading='lazy'
                    src='https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.png'/>
     }
 
@@ -16,7 +16,7 @@ const NavBrand = props => {
             props.path[1] ? <NavLink className="text-warning p-0 m-0" to="/"><Image/></NavLink> : <div><Image/></div>
         }
 
-        <h4 className="titleNav mt-auto p-0 m-0 font-weight-bold text-warning text-capitalize">
+        <h4 className="titleNav mt-auto p-0 m-0 font-weight-bold text-warning text-capitalize pb-1">
             {
                 props.path[1] ? <NavLink className="text-warning p-0 m-0" to="/">{ title }</NavLink> : title
             }

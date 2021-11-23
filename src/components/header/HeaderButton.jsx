@@ -14,7 +14,9 @@ const HeaderButton = props => {
     return !props.dNone
         ? <MDBBtn outline size={props.size} style={props.style} className={className}
                   onClick={() => handleClickHistory("/catalog/" + props.linkLocal)}
-                  color={props.landing ? "warning" : "light"}>{props.text}</MDBBtn>
+                  color={props.landing ? "warning" : "light"}>
+            <span className={props.landing ? "text-warning" : ""}>{props.text}</span>
+    </MDBBtn>
         : null
 }
 

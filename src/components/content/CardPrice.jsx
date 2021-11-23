@@ -2,7 +2,7 @@ import {MDBBtnGroup, MDBBtn} from "mdb-react-ui-kit";
 import React from "react";
 
 const CardPrice = props => {
-    return <MDBBtnGroup shadow="0" className="mb-2">
+    return <MDBBtnGroup shadow="0" className="mt-1">
         <MDBBtn href='#' color="warning" size="sm" style={{"font-family": "'Arial', serif"}}
                 className="shadow text-lowercase">
             {props.quantity}

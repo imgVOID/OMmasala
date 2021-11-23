@@ -27,7 +27,7 @@ const Card = props => {
                 <MDBCardTitle className="text-uppercase m-0 p-0 px-2" onClick={toggleShow} style={{"cursor":"pointer"}}>
                     {props.card.category} <b>{props.card.name}</b>
                 </MDBCardTitle>
-                <MDBCardText className="cardDescription text-lowercase px-2 pt-1">
+                <MDBCardText className="cardDescription text-lowercase p-0 m-0 px-2 pt-1">
                     <h4 className="d-none d-md-block d-lg-block">{props.card.description}</h4>
                     <h2 className="d-md-none d-lg-none">{props.card.description}</h2>
                 </MDBCardText>

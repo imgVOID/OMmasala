@@ -9,7 +9,7 @@ const HeaderStatic = props => {
 
     const history = useHistory();
 
-    return <div className={'headerImage text-center bg-image shadow mt-5 jumbotron-static ' + display}>
+    return <div className={'headerImage text-center bg-image shadow jumbotron-static ' + display}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
             <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-5'>
                 <div className='container text-white px-3'>
