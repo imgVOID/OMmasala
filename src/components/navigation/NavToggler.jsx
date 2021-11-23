@@ -7,7 +7,7 @@ const NavToggler = props => {
                              type="button" data-toggle="collapse" aria-label="Toggle navigation"
                              class="custom-toggler navbar-toggler p-0 m-0">
         <MDBIcon icon={!props.isNavCollapsed ? 'window-close' : 'bars'} style={{"color": "#d1c8c2"}} fas size="sm"
-                 className={props.path[1] === "catalog" ? "" : ""}/>
+                 className={`${props.path[1] === "catalog" ? "" : ""} mb-1 mb-md-0`}/>
     </MDBNavbarToggler>
 }
 
