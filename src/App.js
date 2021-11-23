@@ -1,6 +1,6 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import {Scrollbars} from 'react-custom-scrollbars-2';
 import Header from "./components/header/Header"
 import {Switch, Route, useLocation} from 'react-router-dom';
 import Test from './components/Test';
@@ -25,26 +25,27 @@ function App() {
     const {pathname} = location;
     //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
-    const { height, width } = useWindowDimensions();
+    const {height, width} = useWindowDimensions();
 
     return (
-        <Scrollbars universal style={{ "height": height, "width": width}}
-                    renderScrollbarHorizontal={props => <div {...props} className="scrollbar-vertical"/>}>
+        <Scrollbars universal style={{"height": height, "width": width}}>
             <Meta/>
-            <section className="Header">
-                <Header path={splitLocation}/>
-            </section>
-            <Switch>
-                <Route path='/catalog' component={Catalog}>
-                    <Catalog path={splitLocation}/>
-                </Route>
-                <Route exact path='/'>
-                    <Test/>
-                </Route>
-                <Route exact path='/signup'>
-                    <Test/>
-                </Route>
-            </Switch>
+            <div id="App">
+                <section className="Header">
+                    <Header path={splitLocation}/>
+                </section>
+                <Switch>
+                    <Route path='/catalog' component={Catalog}>
+                        <Catalog path={splitLocation}/>
+                    </Route>
+                    <Route exact path='/'>
+                        <Test/>
+                    </Route>
+                    <Route exact path='/signup'>
+                        <Test/>
+                    </Route>
+                </Switch>
+            </div>
         </Scrollbars>
     );
 }

@@ -20,15 +20,18 @@ const CardModalBody = props => {
     return (
         <MDBModalBody className="bg-light">
             <MDBAccordion flush>
-                <MDBAccordionItem className="justify-content-center bg-light text-center" collapseId="about"
-                                  headerTitle={<HeaderTitle title={"Описание аромата"}/>}>
-                <MDBTypography tag='small' className="bg-light text-center">
-                    {props.card.description_long}
-                </MDBTypography>
-            </MDBAccordionItem>
+                {
+                    props.card.description_long ?
+                        <MDBAccordionItem className="justify-content-center bg-light text-center" collapseId="about"
+                                          headerTitle={<HeaderTitle title={"Описание аромата"}/>}>
+                            <MDBTypography tag='small' className="bg-light text-center font-italic">
+                                {props.card.description_long}
+                            </MDBTypography>
+                        </MDBAccordionItem> : ""
+                }
                 {Object.keys(props.vendors).map((vendorTitle) => {
                     return <MDBAccordionItem className="justify-content-center bg-light text-center"
-                        collapseId={vendorTitle} headerTitle={<HeaderTitle title={vendorTitle}/>}>
+                                             collapseId={vendorTitle} headerTitle={<HeaderTitle title={vendorTitle}/>}>
                         <MDBContainer className="p-0">
                             <a className="p-0 b-0" href={props.card.links[vendorTitle]} target="_blank">
                                 <MDBBtn block color="light" className="font-weight-bold mt-1" size="lg">
