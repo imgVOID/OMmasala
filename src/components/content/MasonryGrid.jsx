@@ -29,7 +29,7 @@ const MasonryGrid = props => {
 
     return (
         <section className="Catalog">
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}} className="container py-3">
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}} className="container py-2">
                 <Masonry>
                     {products.map((product) => {
                         return (

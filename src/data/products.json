@@ -237,13 +237,11 @@
         "bigl": "https://example.com",
         "izi": "https://example.com"
       }
-    }
-  ],
-  "shri": [
+    },
     {
       "id": "18",
-      "name": "Jagannath Puri",
-      "category": "shri",
+      "name": "Jagannatha",
+      "category": "krishna",
       "description": "Фиалка, иланг-иланг и мелисса",
       "image": "https://apricot.com.ua/content/images/17/700x700l80mc0/94063575775769.webp",
       "price": "80",
@@ -256,8 +254,8 @@
     },
     {
       "id": "19",
-      "name": "Krishna-Balaram",
-      "category": "shri",
+      "name": "Balaram",
+      "category": "krishna",
       "description": "Cандал и цветы рудракши, чампаки, гладиолуса, гибискуса",
       "image": "https://apricot.com.ua/content/images/29/700x700l80mc0/67252951822507.webp",
       "price": "80",
@@ -270,8 +268,8 @@
     },
     {
       "id": "20",
-      "name": "Radha Ras Bihari",
-      "category": "shri",
+      "name": "Radha",
+      "category": "krishna",
       "description": "Ландыш, сирень и корица",
       "image": "https://apricot.com.ua/content/images/21/700x700l80mc0/38398832834928.webp",
       "price": "80",
@@ -282,6 +280,8 @@
         "izi": "https://example.com"
       }
     }
+  ],
+  "shri": [
   ],
   "holders": [
     {

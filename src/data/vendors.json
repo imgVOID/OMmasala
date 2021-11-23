@@ -2,18 +2,22 @@
   "olx": {
     "delivery": ["OLX Доставка", "Новая Почта, Justin"],
     "min_amount": ["240 ₴", "предоплата"],
+    "link": ["https://example.com/"],
     "gift": ["Подарок с OLX Доставкой: подставка или аромапалочки Hindu Karnataka", ""]
   },
   "bigl": {
     "delivery": ["Новая Почта, УкрПочта, Justin"],
-    "min_amount": ["80 ₴"]
+    "min_amount": ["80 ₴"],
+    "link": ["https://example.com/"]
   },
   "crafta": {
     "delivery": ["Новая Почта, УкрПочта, Justin"],
-    "min_amount": ["80 ₴"]
+    "min_amount": ["80 ₴"],
+    "link": ["https://example.com/"]
   },
   "izi": {
     "delivery": ["Justin, Новая Почта"],
-    "min_amount": ["предоплата"]
+    "min_amount": ["предоплата"],
+    "link": ["https://example.com/"]
   }
 }

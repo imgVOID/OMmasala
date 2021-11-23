@@ -23,13 +23,13 @@ const Navigation = props => {
 
     return (
         <>
-            <MDBNavbar fixed='top' bgColor="dark" light className='navbar-expand-lg my-0 px-4 py-0 ' id="navbar"
+            <MDBNavbar fixed='top' bgColor="dark" light className='navbar-expand-lg my-0 px-4 py-0' id="navbar"
                        ref={wrapperRef}>
                 <MDBContainer>
                     <NavBrand path={props.path}/>
                     <MDBBadge id="navbarSecondText" className={
-                        `${props.path[1] !== "catalog" ? "d-none" : ""} p-0 m-0 pb-2 pb-md-0 pb-lg-0`}>
-                        <h4 className="p-lg-0 m-0">10 аромапалочек за 80 гривен</h4>
+                        `${props.path[1] !== "catalog" ? "d-none" : ""}`}>
+                        <h4 className="p-lg-0 m-lg-0 m-md-0 p-md-1">10 аромапалочек за 80 гривен</h4>
                     </MDBBadge>
                     <NavToggler handleNavCollapse={toggleCollapse} isNavCollapsed={isNavCollapsed} path={props.path}/>
                     <div id="navbarCollapse" className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>

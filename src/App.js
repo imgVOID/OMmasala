@@ -5,8 +5,10 @@ import {Switch, Route, useLocation} from 'react-router-dom';
 import Header from "./components/header/Header"
 import Catalog from "./pages/Catalog";
 import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/navigation/Footer";
 import Test from './components/Test';
 import useWindowDimensions from "./components/useWindowDimensions";
+import vendors from './data/vendors.json'
 
 
 function Meta() {
@@ -32,7 +34,7 @@ function App() {
         <Scrollbars universal style={{"height": height, "width": width}}>
             <Meta/>
             <div id="App">
-                <section className="Navigation" style={{"height":"45px"}}>
+                <section className="Navigation">
                     <Navigation path={splitLocation}/>
                 </section>
                 <section className="Header">
@@ -40,7 +42,7 @@ function App() {
                 </section>
                 <Switch>
                     <Route path='/catalog' component={Catalog}>
-                        <Catalog path={splitLocation}/>
+                        <Catalog path={splitLocation} vendors={vendors}/>
                     </Route>
                     <Route exact path='/'>
                         <Test/>
@@ -49,6 +51,9 @@ function App() {
                         <Test/>
                     </Route>
                 </Switch>
+                <section className="Footer">
+                    <Footer vendors={vendors}/>
+                </section>
             </div>
         </Scrollbars>
     );

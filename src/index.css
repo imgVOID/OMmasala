@@ -27,12 +27,10 @@ code {
     color: #d1c8c2 !important;
 }
 
-
 .navLink {
     font-family: 'Arial Black', serif !important;
     color: #d1c8c2 !important;
 }
-
 
 .titleNav {
     font-family: 'Yuji Mai', cursive;
@@ -41,7 +39,6 @@ code {
     0 8px 13px rgba(37, 37, 37, 0.1),
     0 18px 23px rgba(37, 37, 37, 0.1);
 }
-
 
 .titleHeader {
     font-family: 'Yuji Mai', cursive;

@@ -9,12 +9,11 @@ const HeaderStatic = props => {
 
     const history = useHistory();
 
-    return <div className={'headerImage text-center bg-image shadow jumbotron-static ' + display}>
+    return <div className={'headerImage text-center bg-image shadow jumbotron-static mt-4' + display}>
         <div className='mask' style={{backgroundColor: 'rgba(37, 37, 37, 0.65)'}}>
-            <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-lg-5'>
+            <div className='d-flex justify-content-center align-items-center h-100 pt-5 mt-4 mt-md-0 mt-lg-5'>
                 <div className='container text-white px-3'>
-                    <h1 className={`
-                    text-uppercase titleHeader mb-0 p-0 mt-lg-0 mt-md-0`}>
+                    <h1 className="text-uppercase titleHeader mb-0 p-0 mt-lg-0 mt-md-0">
                         { props.path[1] ? <Link to="/" className="text-light p-0 m-0">
                             Om Masala
                         </Link> : "Om Masala" }

@@ -1,6 +1,6 @@
+import React from "react";
 import {MDBNavbarBrand} from "mdb-react-ui-kit";
 import {NavLink} from "react-router-dom";
-import React from "react";
 
 
 const NavBrand = props => {
