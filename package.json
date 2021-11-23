@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "mdb-react-ui-kit": "^1.6.0",
     "react": "^16.13.1",
-    "react-custom-scrollbars": "^4.2.1",
+    "react-custom-scrollbars-2": "^4.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-responsive-masonry": "^2.1.3",

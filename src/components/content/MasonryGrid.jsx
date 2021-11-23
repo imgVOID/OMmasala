@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from "./Card";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import {MDBContainer} from "mdb-react-ui-kit";
 
 
 const MasonryGrid = props => {
@@ -29,8 +28,7 @@ const MasonryGrid = props => {
     }
 
     return (
-        <MDBContainer className="Grid mt-3">
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}}>
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}} className="container mt-3">
                 <Masonry>
                     {products.map((product) => {
                         return (
@@ -40,7 +38,6 @@ const MasonryGrid = props => {
                     })}
                 </Masonry>
             </ResponsiveMasonry>
-        </MDBContainer>
     );
 }
 

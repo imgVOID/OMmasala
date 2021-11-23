@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Yuji+Mai&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
 
-html {
-    overflow: hidden;
-}
 body {
-    margin: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -86,11 +82,11 @@ code {
     margin: 0;
     display: flex;
     width: 100% !important;
-    font-family: 'Yuji Mai', Arial, serif;
+    font-family: 'Yuji Mai', 'Caveat', serif;
     background-color: #fafafa !important;
 }
 
-.accordion-header .collapsed h5 i:before {
+.accordion-header .collapsed h4 i:before {
     content: "\f107" !important;
 }
 
@@ -116,6 +112,7 @@ code {
     cursor: pointer;
 }
 
+
 @media screen and (min-width: 900px) {
     .headerImage {
         background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
@@ -134,4 +131,7 @@ code {
         height: 330px;
     }
 
+}
+
+@media screen and (max-width: 700px) {
 }

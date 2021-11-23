@@ -1,6 +1,6 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import Header from "./components/header/Header"
 import {Switch, Route, useLocation} from 'react-router-dom';
 import Test from './components/Test';
@@ -11,7 +11,9 @@ import useWindowDimensions from "./components/useWindowDimensions";
 function Meta() {
     return <Helmet>
         <meta name="description" content="Web site created using create-react-app"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
         <meta name="theme-color" content="#fafafa"/>
         <meta charSet="utf-8"/>
     </Helmet>
@@ -23,12 +25,12 @@ function App() {
     const {pathname} = location;
     //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
-    const { height } = useWindowDimensions();
+    const { height, width } = useWindowDimensions();
 
     return (
-        <div className="App">
+        <Scrollbars universal style={{ "height": height, "width": width}}
+                    renderScrollbarHorizontal={props => <div {...props} className="scrollbar-vertical"/>}>
             <Meta/>
-            <Scrollbars style={{ "height": height }}>
             <section className="Header">
                 <Header path={splitLocation}/>
             </section>
@@ -44,7 +46,6 @@ function App() {
                 </Route>
             </Switch>
         </Scrollbars>
-        </div>
     );
 }
 
