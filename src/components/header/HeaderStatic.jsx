@@ -22,13 +22,10 @@ const HeaderStatic = props => {
                     <div className='pb-5 pb-lg-0 pb-md-0 mt-lg-1'>
                         <HeaderButton linkLocal="" text="Аромапалочки" history={history}
                                       dNone={props.path[1] !== 'catalog'} path={props.path}/>
-                        <br className={`d-lg-none d-md-none`}/>
                         <HeaderButton linkLocal="nature" text='Nature'
                                       history={history} path={props.path} bold={true} landing={landing}/>
-                        <HeaderButton linkLocal="hindu" text='Hindu'
-                                      history={history} path={props.path} bold={true} landing={landing}/>
                         <br className={`d-lg-none d-md-none`}/>
-                        <HeaderButton linkLocal="shri" text='Shri'
+                        <HeaderButton linkLocal="hindu" text='Hindu'
                                       history={history} path={props.path} bold={true} landing={landing}/>
                         <HeaderButton linkLocal="krishna" text='Krishna'
                                       history={history} path={props.path} bold={true} landing={landing}/>
