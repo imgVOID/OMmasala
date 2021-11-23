@@ -24,7 +24,7 @@ const CardModalBody = props => {
                     props.card.description_long ?
                         <MDBAccordionItem className="justify-content-center bg-light text-center" collapseId="about"
                                           headerTitle={<HeaderTitle title={"Описание аромата"}/>}>
-                            <MDBTypography tag='small' className="bg-light text-center font-italic">
+                            <MDBTypography tag='small' className="bg-light text-center">
                                 {props.card.description_long}
                             </MDBTypography>
                         </MDBAccordionItem> : ""
