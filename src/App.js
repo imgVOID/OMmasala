@@ -1,10 +1,11 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
 import {Scrollbars} from 'react-custom-scrollbars-2';
-import Header from "./components/header/Header"
 import {Switch, Route, useLocation} from 'react-router-dom';
-import Test from './components/Test';
+import Header from "./components/header/Header"
 import Catalog from "./pages/Catalog";
+import Navigation from "./components/navigation/Navigation";
+import Test from './components/Test';
 import useWindowDimensions from "./components/useWindowDimensions";
 
 
@@ -31,6 +32,9 @@ function App() {
         <Scrollbars universal style={{"height": height, "width": width}}>
             <Meta/>
             <div id="App">
+                <section className="Navigation" style={{"height":"45px"}}>
+                    <Navigation path={splitLocation}/>
+                </section>
                 <section className="Header">
                     <Header path={splitLocation}/>
                 </section>

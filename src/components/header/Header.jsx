@@ -1,6 +1,5 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Navigation from "../navigation/Navigation";
 import HeaderCarousel from "./HeaderCarousel";
 import HeaderStatic from "./HeaderStatic";
 import Catalog from "../../pages/Catalog";
@@ -8,7 +7,6 @@ import Catalog from "../../pages/Catalog";
 
 const Header = props => {
     return <header>
-            <Navigation path={props.path}/>
             <Switch>
                 <Route path='/catalog' component={Catalog}>
                     <HeaderStatic path={props.path}/>

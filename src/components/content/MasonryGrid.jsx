@@ -28,7 +28,8 @@ const MasonryGrid = props => {
     }
 
     return (
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}} className="container mt-3">
+        <section className="Catalog">
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 930: 3, 1200: 4}} className="container py-3">
                 <Masonry>
                     {products.map((product) => {
                         return (
@@ -38,6 +39,7 @@ const MasonryGrid = props => {
                     })}
                 </Masonry>
             </ResponsiveMasonry>
+        </section>
     );
 }
 
