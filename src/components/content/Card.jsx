@@ -33,7 +33,7 @@ const Card = props => {
                 </MDBCardText>
                 {
                     props.card.category === "Подставка"
-                        ? <CardPrice price={props.card.price}/> : ""
+                        ? <CardPrice price={props.card.price} quantity="1"/> : ""
                 }
             </MDBCardBody>
             <CardModal basicModal={basicModal} setBasicModal={setBasicModal} toggleShow={toggleShow}

@@ -23,10 +23,10 @@ const CarouselCaption = props => {
         <div className='px-5 mx-3 m-lg-0 p-lg-0 m-lg-0'>
             <HeaderButton linkLocal="nature" text='Nature' color="warning" size="lg" path={props.path}
                           style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
-            <HeaderButton linkLocal="mandir" text='Mandir' color="warning" size="lg" path={props.path}
+            <HeaderButton linkLocal="hindu" text='Hindu' color="warning" size="lg" path={props.path}
                           style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
             <br className="d-lg-none"/>
-            <HeaderButton linkLocal="tibetan" text='Tibetan' color="warning" size="lg" path={props.path}
+            <HeaderButton linkLocal="shri" text='Shri' color="warning" size="lg" path={props.path}
                           style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>
             <HeaderButton linkLocal="krishna" text='Krishna' color="warning" size="lg" path={props.path}
                           style={{"font-family":"'Yuji Mai', cursive"}} history={history} landing={true}/>

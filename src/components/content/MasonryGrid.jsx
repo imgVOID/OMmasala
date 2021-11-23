@@ -33,7 +33,7 @@ const MasonryGrid = props => {
                     {products.map((product) => {
                         return (
                             <Card card={product} className={product.category} vendors={props.vendors}
-                                  path={props.path} links={product.links}/>
+                                  path={props.path} links={product.links} category={props.category} />
                         );
                     })}
                 </Masonry>

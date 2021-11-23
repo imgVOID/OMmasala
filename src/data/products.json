@@ -15,7 +15,7 @@
     },
     {
       "id": "2",
-      "name": "Sandalwood",
+      "name": "Chandan",
       "category": "nature",
       "image": "https://apricot.com.ua/content/images/46/700x700l80mc0/54691989759895.webp",
       "price": "80",
@@ -42,7 +42,7 @@
     },
     {
       "id": "4",
-      "name": "Eucalyptus",
+      "name": "Eucalypti",
       "category": "nature",
       "description": "листья и масло эвкалипта",
       "image": "https://apricot.com.ua/content/images/30/700x700l80mc0/73653555037934.webp",
@@ -82,7 +82,7 @@
     },
     {
       "id": "7",
-      "name": "Frankincense",
+      "name": "Olibanum",
       "category": "nature",
       "description": "ладан, смола Босвелии",
       "image": "https://apricot.com.ua/content/images/15/700x700l80mc0/98530947482506.webp",
@@ -137,26 +137,12 @@
       }
     }
   ],
-  "tibetan": [
+  "hindu": [
     {
       "id": "11",
-      "name": "Makalu",
-      "category": "tibetan",
-      "description": "Лавр, полынь и камфора",
-      "image": "https://apricot.com.ua/content/images/32/700x700l80mc0/89481905222696.webp",
-      "price": "80",
-      "links": {
-        "olx": "https://example.com",
-        "crafta": "https://example.com",
-        "bigl": "https://example.com",
-        "izi": "https://example.com"
-      }
-    },
-    {
-      "id": "12",
-      "name": "Annapurna",
-      "category": "tibetan",
-      "description": "Высокогорные цветы",
+      "name": "Kullu",
+      "category": "hindu",
+      "description": "пыльца с цветов из высокогорной тибетской долины",
       "image": "https://apricot.com.ua/content/images/16/700x700l80mc0/87023279654166.webp",
       "price": "80",
       "links": {
@@ -167,10 +153,10 @@
       }
     },
     {
-      "id": "13",
-      "name": "Chomolungma",
-      "category": "tibetan",
-      "description": "Бетель, рододендрон и нард",
+      "id": "12",
+      "name": "Manaslu",
+      "category": "hindu",
+      "description": "гималайские масла нарда и рододендрона, листья бетеля",
       "image": "https://apricot.com.ua/content/images/27/700x700l80mc0/76272290378608.webp",
       "price": "80",
       "links": {
@@ -181,11 +167,25 @@
       }
     },
     {
+      "id": "13",
+      "name": "Goa",
+      "category": "hindu",
+      "description": "смола мирры, стручок ванили и кора коричника с побережья океана",
+      "image": "https://apricot.com.ua/content/images/18/700x700l80mc0/17958009719601.webp",
+      "price": "80",
+      "links": {
+        "olx": "https://example.com",
+        "crafta": "https://example.com",
+        "bigl": "https://example.com",
+        "izi": "https://example.com"
+      }
+    },
+    {
       "id": "14",
-      "name": "Kutang",
-      "category": "tibetan",
-      "description": "Мак, миндаль и можжевельник",
-      "image": "https://apricot.com.ua/content/images/26/700x700l80mc0/43856343562866.webp",
+      "name": "Karnataka",
+      "category": "hindu",
+      "description": "стружка майсурского сандалового дерева и цветки шафрана",
+      "image": "https://apricot.com.ua/content/images/43/700x700l80mc0/81000864133007.webp",
       "price": "80",
       "links": {
         "olx": "https://example.com",
@@ -198,10 +198,10 @@
   "krishna": [
     {
       "id": "15",
-      "name": "Game",
+      "name": "Shyam",
       "category": "krishna",
-      "description": "Цитронелла и цветы Рудракши",
-      "image": "https://apricot.com.ua/content/images/30/700x700l80mc0/93443773396800.webp",
+      "description": "белый мускус и масло белого сандала",
+      "image": "https://apricot.com.ua/content/images/24/700x700l80mc0/67274626818740.webp",
       "price": "80",
       "links": {
         "olx": "https://example.com",
@@ -212,9 +212,9 @@
     },
     {
       "id": "16",
-      "name": "Love",
+      "name": "Prema",
       "category": "krishna",
-      "description": "Лотос, туласи, сандал и жасмин",
+      "description": "пыльца лотоса и жасмина, листья туласи",
       "image": "https://apricot.com.ua/content/images/20/700x700l80mc0/61831897678901.webp",
       "price": "80",
       "links": {
@@ -226,10 +226,10 @@
     },
     {
       "id": "17",
-      "name": "Dance",
+      "name": "Tandava",
       "category": "krishna",
-      "description": "Шафран и сандал",
-      "image": "https://apricot.com.ua/content/images/43/700x700l80mc0/81000864133007.webp",
+      "description": "пыльца рудракши и листья цитронеллы",
+      "image": "https://apricot.com.ua/content/images/30/700x700l80mc0/93443773396800.webp",
       "price": "80",
       "links": {
         "olx": "https://example.com",
@@ -239,11 +239,11 @@
       }
     }
   ],
-  "mandir": [
+  "shri": [
     {
       "id": "18",
-      "name": "Shree Jagannath Puri",
-      "category": "mandir",
+      "name": "Jagannath Puri",
+      "category": "shri",
       "description": "Фиалка, иланг-иланг и мелисса",
       "image": "https://apricot.com.ua/content/images/17/700x700l80mc0/94063575775769.webp",
       "price": "80",
@@ -256,8 +256,8 @@
     },
     {
       "id": "19",
-      "name": "Shree Krishna-Balaram",
-      "category": "mandir",
+      "name": "Krishna-Balaram",
+      "category": "shri",
       "description": "Cандал и цветы рудракши, чампаки, гладиолуса, гибискуса",
       "image": "https://apricot.com.ua/content/images/29/700x700l80mc0/67252951822507.webp",
       "price": "80",
@@ -270,8 +270,8 @@
     },
     {
       "id": "20",
-      "name": "Shree Radha Ras Bihari",
-      "category": "mandir",
+      "name": "Radha Ras Bihari",
+      "category": "shri",
       "description": "Ландыш, сирень и корица",
       "image": "https://apricot.com.ua/content/images/21/700x700l80mc0/38398832834928.webp",
       "price": "80",
