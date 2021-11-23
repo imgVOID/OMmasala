@@ -15,7 +15,7 @@ const Footer = props => {
     return <MDBFooter backgroundColor='light' className='text-center text-lg-left w-100 pt-4'>
         <MDBContainer className='p-5'>
             <MDBRow>
-                <MDBCol lg='2' md='4' className="col-5 px-3 px-lg-5 py-4">
+                <MDBCol lg='2' md='4' className="col-5 px-3 px-lg-4 py-4">
                     <MDBBtnGroup vertical className="w-100 m-auto">
                         {
                             Object.keys(props.vendors).map((vendorTitle) => {
